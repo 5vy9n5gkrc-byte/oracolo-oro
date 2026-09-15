@@ -309,8 +309,8 @@ def render_affidabilita(affidabilita, n_verificate_ora):
 def genera_pagina(output_path="index.html"):
     print("Scarico prezzi reali di oro e dollaro...")
     prices, gold_close, dxy_close, oggi = carica_prezzi_reali()
-    prezzo_oggi = float(gold_close.iloc[-1])
-    prezzo_ieri = float(gold_close.iloc[-2])
+    prezzo_oggi = float(oggi["attuale"])
+    prezzo_ieri = float(oggi["chiusura_precedente"])
     variazione_oggi = (prezzo_oggi / prezzo_ieri - 1) * 100
     min_oggi, max_oggi, apertura_oggi = oggi["minimo"], oggi["massimo"], oggi["apertura"]
     variazione_min_oggi = (min_oggi / prezzo_ieri - 1) * 100
@@ -319,9 +319,9 @@ def genera_pagina(output_path="index.html"):
 
     mercato_aperto, ora_ny = stato_mercato()
     if mercato_aperto:
-        stato_mercato_testo = f"Mercato aperto (chiude alle 16:00, ora di New York {ora_ny.strftime('%H:%M')})"
+        stato_mercato_testo = f"Mercato aperto (ora di New York {ora_ny.strftime('%H:%M')})"
     else:
-        stato_mercato_testo = f"Mercato chiuso (riapre alle 9:30, ora di New York {ora_ny.strftime('%H:%M')})"
+        stato_mercato_testo = f"Mercato chiuso, riapre presto (ora di New York {ora_ny.strftime('%H:%M')})"
 
     print("Scarico le notizie di oggi...")
     notizie_per_categoria = notizie_recenti_per_categoria()
