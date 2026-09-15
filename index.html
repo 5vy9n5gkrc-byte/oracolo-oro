@@ -50,6 +50,7 @@
   ul.notizie a:hover { text-decoration: underline; }
   ul.notizie .muted { display: block; font-size: 0.8em; }
   .sintesi { font-size: 1.02em; }
+  .fonte-notizie { margin-bottom: 10px; font-size: 0.82em; }
   ul.storico { padding-left: 18px; margin-top: 6px; }
   ul.storico li { margin-bottom: 6px; }
   .data-storica { color: #57606a; margin-right: 6px; }
@@ -85,7 +86,7 @@
 <body>
   <h1>Oracolo dell'Oro</h1>
   <div class="riga-intestazione">
-    <div class="aggiornato">Aggiornato il 15/09/2026 alle 15:13</div>
+    <div class="aggiornato">Aggiornato il 15/09/2026 alle 15:15</div>
     <div class="blocco-aggiorna">
       <button id="btn-aggiorna" onclick="aggiornaDati()" style="display:none">&#8635; Aggiorna dati</button>
       <span id="stato-aggiorna" class="muted"></span>
@@ -103,7 +104,7 @@
     <div class="var" style="color:#cf222e">-0.47% oggi</div>
     <div class="range-oggi muted">Range odierno: -1.16% / +0.14% ($4,301.60 &ndash; $4,358.20)</div>
     <div class="range-oggi muted">Apertura: $4,340.30 (-0.27%) &middot; Chiusura precedente: $4,351.90</div>
-    <div class="range-oggi muted">Mercato aperto (ora di New York 09:13)</div>
+    <div class="range-oggi muted">Mercato aperto (ora di New York 09:15)</div>
   </div>
 
   <section class="categoria" id="sezione-live" style="display:none">
@@ -343,6 +344,12 @@
       <p class="muted">attacchi, raid, offensive militari</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;attacco missilistico&quot; OR &quot;raid aereo&quot; OR offensiva OR bombardamento</i> (italiano) /
+        <i>&quot;missile strike&quot; OR airstrike OR offensive OR bombing</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOWVl2d2hUaklEU3pvekNNeVNPYVNpbVhrS19CbGNDYjZtNmNxWWtzN0pwdGgwQUIybFhGVFZQTGlCbGYyekU1ZGpScV9Id0ZtUk51ekN1elpEdUlFaEU1VmIxQzJUMVMyZEtuRlhta2d0cGtmT1BhUVpjYjhLTGEtWk9jYjBqVVFWM2VjeV9YUHBXU3Y2RkE?oc=5" target="_blank">Guerra in Ucraina, Nato abbatte drone nei cieli della Lituania - Vatican News</a>
@@ -442,6 +449,12 @@
       <p class="muted">tregue, cessate il fuoco, ritiri</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;cessate il fuoco&quot; OR tregua OR armistizio</i> (italiano) /
+        <i>&quot;ceasefire&quot; OR truce OR armistice</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxONnRIMGFhYmg4YXlHd0dKaTI1eTJIVi1kV1pnQU43TDFPaVlEdWxMdG81d0JtM253aFZjMnR1aUlCbjZQQnBNMllsUXoxbWFqVmxva1MtaFY2RWlPTmpmOXptQ2lESGx2UjNOQ0FxU0R2SklpMC1PNVRsZHNpeEFxczhWQ0pyaERydUpsYy1jQTJGeE1QaEVIZmNIVU5Ua3lpQkZYeVZ4Snc?oc=5" target="_blank">Russia, Ukraine Trade Aerial Strikes After Trump’s Claim of Truce - WSJ</a>
@@ -526,6 +539,12 @@
       <p class="muted">nuove sanzioni, embargo, restrizioni commerciali</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;nuove sanzioni&quot; OR embargo OR &quot;export control&quot;</i> (italiano) /
+        <i>&quot;new sanctions&quot; OR embargo OR &quot;export controls&quot;</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNSUN0X1BTY09YLXY4X2dwc0doblQxbXRxMUExVGY0c2JoaFZubUZPdFlXTnZiX3k1S1Axc2RqcEpFOExnRFRsWWRhcS1XU2YwYnN2cW1oZ3FtM0NyUTN5OHJpSEdBTElfdUhFVTJYd2Rfb1NpWU9BNkItT2Mtd3NFRXRWU05jVjQ?oc=5" target="_blank">Tariffs, Export Controls, Sanctions, and All of the Above: A Guide to Enforcement Trends in a New National Security Era - JD Supra</a>
@@ -620,6 +639,12 @@
       <p class="muted">eventi che minacciano l'offerta di energia</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>oleodotto OR gasdotto OR OPEC OR &quot;stretto di Hormuz&quot; OR raffineria</i> (italiano) /
+        <i>pipeline OR OPEC OR &quot;strait of hormuz&quot; OR refinery OR oil</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVGZNVlpqdGZqMGlsa1lSR2IyWU0tbmd2R1ZkY2o5VDNlb0VsMEdhbWlZVzJBLXJ0WU9MTm13WnN2R0M0Slg4TzFkb1VSYVRxQXE5ejQ5eTNRbGcxdUVSNTFKYlk2WmxYbkdPMTJIUEZJRVdBUmFKVHVCamlsUzB2NFJLbkNGbkJFSjR3TTlhNF9vT2g4MXk0MjlzOHhVaWNGX3U3RGlUS0JzekpCb0VBbU8zMGdUbFpIaGlCVHlwcEtoR0U?oc=5" target="_blank">Oil prices climb as attacks, pipeline outage deepen Saudi supply concerns - Reuters</a>
@@ -709,6 +734,12 @@
       <p class="muted">colpi di stato, crisi di governo, elezioni</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;colpo di stato&quot; OR golpe OR dimissioni OR &quot;elezioni anticipate&quot;</i> (italiano) /
+        <i>&quot;coup d&#x27;etat&quot; OR &quot;snap election&quot; OR resignation</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOLU1OampBRUlIaWJ4UERTdmhCNDNQQUtib0gxUjdpZEpIbTRqN1IwMnRUckQ2N21UcVlRLWE5a0YtYlhaS2h4dGNMdjRybU1HSi1FZF9ZYWxDRlJTTEFWLVBPcnRJbXFDTXB1SkxHNlNkc3pFTmVTQWZvNHhBWEV1bXFING9EbG9pMnR6Z3NXSk1JWFVUbTZnX1JJZ2I?oc=5" target="_blank">Serbia: elezioni anticipate in un paese in ebollizione - Osservatorio Balcani Caucaso Transeuropa</a>
@@ -798,6 +829,12 @@
       <p class="muted">decisioni sui tassi, mosse delle banche centrali</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;tassi di interesse&quot; OR &quot;banca centrale&quot; OR Fed OR &quot;taglio dei tassi&quot;</i> (italiano) /
+        <i>&quot;interest rate&quot; OR &quot;Federal Reserve&quot; OR &quot;rate cut&quot; OR &quot;rate hike&quot;</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxNRTBLV1VFbG1fNEdvV0NsVkR3NG5QR1pyLWNFYzVxMjg0dklYdWhKbi1hZzBTdFVNQTE5WG5mOTR2VDgwUVluazg5RXpnN2lGai14dU5ZVWZSYUZrYTJmbzBsSUUwWE0zX0hkYmlpRUx1eWxXaFRRcEdULUVjMDV1cnp6QTJwWG5qbW5mQWtrZHhaY2tSdUtOZjNWYmFCNHF5RUFwTzczd2JKQy01dzFVVVRTeFNIUXJQWjVObmI0RDJ6WUhUQjBmZV8yZXRVNVlGdDR3OVNPdl9sdlNmVXRtWm92QmNtenMzM2hIblo4UVY?oc=5" target="_blank">Euro Dollaro sotto Pressione verso 1,1535. BCE più Restrittiva, ma la FED Continua a Sostenere il Biglietto Verde - FXEmpire</a>
@@ -882,6 +919,12 @@
       <p class="muted">fallimenti bancari, crolli di mercato</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>&quot;crisi bancaria&quot; OR &quot;fallimento di una banca&quot; OR &quot;crollo dei mercati&quot;</i> (italiano) /
+        <i>&quot;bank failure&quot; OR &quot;banking crisis&quot; OR &quot;market crash&quot; OR &quot;market selloff&quot;</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       <ul class='notizie'>
           <li>
             <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQMWh5ekNWRGJPR2lHTjZpdGhkWmhUeS1qclZySzViVHc1Uzd1b3hwZjJPMjZqanRvZXJXb3p3Tjl1YlpGZ2hNU2RLT3VVV1pnWU40MDdURENNb1dtTHI3SldWYnZBb2xaTWxrMUs1OS1xcWM0SVdXVzIxSXY2UWZtQ2tWUEd0YXVNSXdQSQ?oc=5" target="_blank">Don’t Panic About a US Bond Market Selloff - Morningstar</a>
@@ -892,12 +935,12 @@
             <span class="muted">14/09 20:47</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOQS02Q29NVXVkUTdscU9MNVZCejBWQ0Nld3cxcDVRR0EzU1NTaUxhMmdVTXdXTzlNSGJMUVFmMVltdGpvZWYwU1Mzc0FLVEdLeG9fSmMtdlo0MktJdXZLNy1XQU9FOC1aUXM4QUdjVGtBejQ0aGZRWEw0QnlqdjVpcERfbWtKMk9fNXpkdGtreTJzZGhkcHdFUVdtaEd6MHM?oc=5" target="_blank">If a Stock Market Crash Is Coming, History Says This 1 Move Protects Investors Every Single Time - Yahoo Finance</a>
-            <span class="muted">12/09 13:20</span>
-          </li>
-          <li>
             <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5JeTVicVRrYXVQMHZkUXZwNmwwN0lGdFRHLVZoR2NmczBJMTQwUHl4eUVMN2FaQ215Q1VneGhKMy1NQjFQM0NvWjZ4NGxQOHROVzNUVks5U2tzQUZibmtRRkl3UUY5bGJxcm1sQTBmYi1NX01lYnl5WA?oc=5" target="_blank">Four on the floor: il crollo dei mercati azionari continua mentre il petrolio sale alle stelle e i rendimenti dei titoli del Tesoro registrano un&#x27;impennata - TradingView</a>
             <span class="muted">10/09 20:17</span>
+          </li>
+          <li>
+            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2h0QjlLSTlBdjJIWVNYeVpsQVpWcWt5OG50VDNvYVpKSVdZVGJHX1BBVmtyTENVZWVGald6bGw2amJ4OEpXOUFpMVZmVExPRDliVmRwMmpUUDdERmMzNUdCRDlpWkg4RVMyREZPRjBpWkFVenRfOF8zU053VllFT21KaGtuS2VWN0x5eWZuLUN5NWVyVDZRbXNDSExYcE0?oc=5" target="_blank">Is a Stock Market Crash Imminent Under President Donald Trump? More Than 85 Years of Historical Precedent Offers an Answer. - Yahoo Finance</a>
+            <span class="muted">30/08 07:00</span>
           </li>
           <li>
             <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWnhVR3BRM2JhcXEyamY0R3BNYTd6NEdrOHV2Q2phWTd2T2pJQTZvUUhTeDUxYk54cmhZYXB1QTdCYWxoQ0tYd0xQX2l2eWxpbnJXWktzdEVnOGpQM2hUS1RfRThQUjkyMlQ5cjlnTXNiQ2U1S0M5N2tGNUgzZ0IwVlpMUjV6OWVJRDlkeWdwdkpGcUVBYlZWYmh4ZGZ3YkIzSElsR3R4TElXR0I3TkpoN1E1RUJlNy1DVkh0SkxRT3F6WF9NcFVKRVJhVElVcmhNYzhCbmpCX1FNZFBmVGtLOUQwN2d3NVU?oc=5" target="_blank">&quot;Bagno di sangue&quot;: gli analisti reagiscono al crollo dei mercati asiatici sulla scia del selloff tecnologico - it.marketscreener.com</a>

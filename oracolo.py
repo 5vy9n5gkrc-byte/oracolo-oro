@@ -29,7 +29,7 @@ from event_study import abnormal_returns, ESTIM_WINDOW, ESTIM_GAP
 from eventi_storici import load_eventi_storici
 from trend_storici import load_trend
 from dati_mercato import carica_prezzi_reali, stato_mercato
-from notizie_live import notizie_recenti_per_categoria
+from notizie_live import notizie_recenti_per_categoria, QUERY_PER_CATEGORIA
 from grafico import svg_andamento_oro, svg_volatilita, svg_confronto, colore_trend
 from statistiche import volatilita_generale, volatilita_mobile, test_statistico_categoria
 from previsioni import calcola_previsioni
@@ -199,6 +199,12 @@ def render_sezione(cat, notizie, casi, test):
       <p class="muted">{DESC_CATEGORIA[cat]}</p>
 
       <h3>Notizie di oggi</h3>
+      <p class="muted fonte-notizie">
+        Fonte: Google News, ricerca automatica per:
+        <i>{html.escape(QUERY_PER_CATEGORIA[cat]['it'])}</i> (italiano) /
+        <i>{html.escape(QUERY_PER_CATEGORIA[cat]['en'])}</i> (inglese).
+        Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
+      </p>
       {render_notizie(notizie)}
 
       <h3>Casi simili nel passato (dati reali)</h3>
@@ -467,6 +473,7 @@ def genera_pagina(output_path="index.html"):
   ul.notizie a:hover {{ text-decoration: underline; }}
   ul.notizie .muted {{ display: block; font-size: 0.8em; }}
   .sintesi {{ font-size: 1.02em; }}
+  .fonte-notizie {{ margin-bottom: 10px; font-size: 0.82em; }}
   ul.storico {{ padding-left: 18px; margin-top: 6px; }}
   ul.storico li {{ margin-bottom: 6px; }}
   .data-storica {{ color: #57606a; margin-right: 6px; }}
