@@ -513,6 +513,13 @@ def genera_pagina(output_path="index.html"):
     <div class="range-oggi muted">{stato_mercato_testo}</div>
   </div>
 
+  <section class="categoria" id="sezione-live" style="display:none">
+    <h2>Oggi in diretta</h2>
+    <p class="muted">Si aggiorna da solo ogni 25 secondi (solo dal Mac, quando il server locale e' attivo).</p>
+    <svg id="grafico-live" viewBox="0 0 720 260" width="100%" style="max-width:720px; height:auto;"></svg>
+    <p class="muted" id="live-stato">Carico...</p>
+  </section>
+
   {sezione_previsioni}
 
   {sezione_affidabilita}
@@ -563,8 +570,57 @@ def genera_pagina(output_path="index.html"):
     // quindi mostriamo invece la nota sull'aggiornamento automatico.
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {{
       document.getElementById('btn-aggiorna').style.display = 'inline-block';
+      document.getElementById('sezione-live').style.display = 'block';
+      aggiornaGraficoLive();
+      setInterval(aggiornaGraficoLive, 25000);
     }} else {{
       document.getElementById('nota-auto').style.display = 'inline';
+    }}
+
+    function disegnaGraficoLive(punti) {{
+      const svg = document.getElementById('grafico-live');
+      const L = 720, A = 260, padSx = 60, padDx = 20, padTop = 20, padBottom = 30;
+      const prezzi = punti.map(p => p.prezzo);
+      let pMin = Math.min(...prezzi), pMax = Math.max(...prezzi);
+      const margine = (pMax - pMin) * 0.1 || 1;
+      pMin -= margine; pMax += margine;
+      const tMin = punti[0].t, tMax = punti[punti.length - 1].t;
+      const tSpan = Math.max(tMax - tMin, 1);
+
+      const x = t => padSx + (t - tMin) / tSpan * (L - padSx - padDx);
+      const y = p => (A - padBottom) - (p - pMin) / (pMax - pMin) * (A - padBottom - padTop);
+
+      let svgContent = '';
+      for (const frac of [0, 0.5, 1]) {{
+        const val = pMin + frac * (pMax - pMin);
+        const yy = y(val);
+        svgContent += `<line x1="${{padSx}}" y1="${{yy.toFixed(1)}}" x2="${{L-padDx}}" y2="${{yy.toFixed(1)}}" stroke="#e6e0d4" stroke-width="1"/>`;
+        svgContent += `<text x="${{padSx-8}}" y="${{(yy+3).toFixed(1)}}" font-size="10" text-anchor="end" fill="#57606a">$${{val.toFixed(0)}}</text>`;
+      }}
+
+      const puntiStr = punti.map(p => `${{x(p.t).toFixed(1)}},${{y(p.prezzo).toFixed(1)}}`).join(' ');
+      svgContent += `<polyline points="${{puntiStr}}" fill="none" stroke="#b8860b" stroke-width="1.8"/>`;
+
+      const ultimo = punti[punti.length - 1];
+      svgContent += `<circle cx="${{x(ultimo.t).toFixed(1)}}" cy="${{y(ultimo.prezzo).toFixed(1)}}" r="3.5" fill="#b8860b"/>`;
+
+      svg.innerHTML = svgContent;
+    }}
+
+    async function aggiornaGraficoLive() {{
+      const stato = document.getElementById('live-stato');
+      try {{
+        const resp = await fetch('/prezzo-live');
+        if (!resp.ok) throw new Error('errore server');
+        const dati = await resp.json();
+        if (!dati.punti || dati.punti.length < 2) throw new Error('dati insufficienti');
+        disegnaGraficoLive(dati.punti);
+        const ultimo = dati.punti[dati.punti.length - 1];
+        const ora = new Date(ultimo.t).toLocaleTimeString('it-IT', {{hour: '2-digit', minute: '2-digit', second: '2-digit'}});
+        stato.textContent = `Ultimo prezzo: $${{ultimo.prezzo.toFixed(2)}} alle ${{ora}} (ora locale)`;
+      }} catch (e) {{
+        stato.textContent = 'Aggiornamento in pausa, riprovo tra poco...';
+      }}
     }}
 
     async function aggiornaDati() {{
