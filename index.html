@@ -24,6 +24,12 @@
   #btn-aggiorna:hover { background: #33393f; }
   #btn-aggiorna:disabled { background: #9a9a9a; cursor: default; }
   #stato-aggiorna { font-size: 0.85em; }
+  #banner-nuovi-dati {
+    background: #fff3cd; border: 1px solid #f0d878; border-radius: 8px;
+    padding: 10px 14px; margin-bottom: 20px; cursor: pointer; font-size: 0.9em;
+    text-align: center;
+  }
+  #banner-nuovi-dati:hover { background: #ffe9a8; }
   .prezzo {
     background: #fff; border: 1px solid #e6e0d4; border-radius: 12px;
     padding: 18px 20px; margin-bottom: 28px;
@@ -79,12 +85,16 @@
 <body>
   <h1>Oracolo dell'Oro</h1>
   <div class="riga-intestazione">
-    <div class="aggiornato">Aggiornato il 15/09/2026 alle 13:09</div>
+    <div class="aggiornato">Aggiornato il 15/09/2026 alle 15:13</div>
     <div class="blocco-aggiorna">
       <button id="btn-aggiorna" onclick="aggiornaDati()" style="display:none">&#8635; Aggiorna dati</button>
       <span id="stato-aggiorna" class="muted"></span>
       <span id="nota-auto" class="muted" style="display:none">Si aggiorna da solo ogni 30 minuti circa</span>
     </div>
+  </div>
+
+  <div id="banner-nuovi-dati" onclick="location.reload()" style="display:none">
+    &#8635; Nuovi dati disponibili (prezzi, notizie, probabilita') &mdash; clicca per vederli
   </div>
 
   <div class="prezzo">
@@ -93,7 +103,7 @@
     <div class="var" style="color:#cf222e">-0.47% oggi</div>
     <div class="range-oggi muted">Range odierno: -1.16% / +0.14% ($4,301.60 &ndash; $4,358.20)</div>
     <div class="range-oggi muted">Apertura: $4,340.30 (-0.27%) &middot; Chiusura precedente: $4,351.90</div>
-    <div class="range-oggi muted">Mercato aperto (ora di New York 09:09)</div>
+    <div class="range-oggi muted">Mercato aperto (ora di New York 09:13)</div>
   </div>
 
   <section class="categoria" id="sezione-live" style="display:none">
@@ -343,7 +353,7 @@
             <span class="muted">15/09 07:41</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxON3VWNG9YRFk4a0ozemx3d04tODZKRHNndG00S0Y5VGd3ZnRybzNZdm1jeW13a3ZXS2xESUFUREVxUUREeUF4aTB1d0pka0NmSTZEN3lmMk51SkRRRlV6Nzk5N1YwTFdBQjg3bHhJNlRFcUdKSUM5WFNXUjNURnVTdi1DeU9qQVpoc1RMQlNadG94SEYxdF9hU09LS25NSkJZdlVGZ0RZTjRndktNY1JyWTcxZm0?oc=5" target="_blank">Sale il conto della guerra. E l&#x27;Arabia Saudita si scopre sempre più vulnerabile - Avvenire</a>
+            <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxON3VWNG9YRFk4a0ozemx3d04tODZKRHNndG00S0Y5VGd3ZnRybzNZdm1jeW13a3ZXS2xESUFUREVxUUREeUF4aTB1d0pka0NmSTZEN3lmMk51SkRRRlV6Nzk5N1YwTFdBQjg3bHhJNlRFcUdKSUM5WFNXUjNURnVTdi1DeU9qQVpoc1RMQlNadG94SEYxdF9hU09LS25NSkJZdlVGZ0RZTjRndktNY1JyWTcxZm0?oc=5" target="_blank">Sale il conto della guerra. E l&#x27;Arabia Saudita si scopre sempre più vulnerabile - avvenire.it</a>
             <span class="muted">15/09 07:09</span>
           </li>
           <li>
@@ -442,7 +452,7 @@
             <span class="muted">15/09 10:48</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxNbS1ybjVMampqYjNoZzg1TExPVXI2S09pc1ZkVktmMXpHcFZuOXRoZjE1X1RFZHNtN1huU1AxZkhsVjNadDZILUNHSVJWYV9aVkw0RHc2ekJrWDVmalZnQVBYSTFFWTItNmg3eW1hSUdhaDlDd0E5S3FWajZPMy13WDNWdXBRanp2UHRJaFUxbzhhWGY3U0hLZDdUX2xqc1U2dFBDODJybEE3Z0ZlU1ZDUlBGZ2R0TXFSOHdpQTBxUTV4MUNEVV93UW52ZjNHOXZ0NWQ4N2xFX2NJM1hJOXNCWXptVzFpZExiUUpkX0FIVmkwWVV3UXktUTBTOEFNZzcycHRB0gGIAkFVX3lxTFBZNDRKdWk3NnVEVkNUakhGOWFkU05HVGdwMlRoM3JRSnF4S0w1MnlvVkR1RVJMSFJhekEtRVhYNFVXc0hJc0NrbDRiam8ydjdmNWhPRHRhOWtpOVBiT04wTXUtS3piUXJ1eXY1b0FmY3BqNDBoQkhyU3F5ckloVUFIbk1KZVlEamRmYWFJN3Fpb053LUNyLTF6MFo3NlYtQVVsSFBPdENldnhkeDR3U2FJNjUyS1BpNTktSHppRXlDTXpGVWhyYzkxRy13Z1h3N1ljMTl1cVBCUHZ0cGdqM3RmajN0TFI2Q2dPSmNnOWV1QnpiOHB0Ny1nU09UNXNsRkFGY0lmZklmVw?oc=5" target="_blank">Trump annuncia la tregua energetica Mosca-Kiev ma Zelensky chiede garanzie - ansa.it</a>
+            <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxNbS1ybjVMampqYjNoZzg1TExPVXI2S09pc1ZkVktmMXpHcFZuOXRoZjE1X1RFZHNtN1huU1AxZkhsVjNadDZILUNHSVJWYV9aVkw0RHc2ekJrWDVmalZnQVBYSTFFWTItNmg3eW1hSUdhaDlDd0E5S3FWajZPMy13WDNWdXBRanp2UHRJaFUxbzhhWGY3U0hLZDdUX2xqc1U2dFBDODJybEE3Z0ZlU1ZDUlBGZ2R0TXFSOHdpQTBxUTV4MUNEVV93UW52ZjNHOXZ0NWQ4N2xFX2NJM1hJOXNCWXptVzFpZExiUUpkX0FIVmkwWVV3UXktUTBTOEFNZzcycHRB0gGIAkFVX3lxTFBZNDRKdWk3NnVEVkNUakhGOWFkU05HVGdwMlRoM3JRSnF4S0w1MnlvVkR1RVJMSFJhekEtRVhYNFVXc0hJc0NrbDRiam8ydjdmNWhPRHRhOWtpOVBiT04wTXUtS3piUXJ1eXY1b0FmY3BqNDBoQkhyU3F5ckloVUFIbk1KZVlEamRmYWFJN3Fpb053LUNyLTF6MFo3NlYtQVVsSFBPdENldnhkeDR3U2FJNjUyS1BpNTktSHppRXlDTXpGVWhyYzkxRy13Z1h3N1ljMTl1cVBCUHZ0cGdqM3RmajN0TFI2Q2dPSmNnOWV1QnpiOHB0Ny1nU09UNXNsRkFGY0lmZklmVw?oc=5" target="_blank">Trump annuncia la tregua energetica Mosca-Kiev ma Zelensky chiede garanzie - ANSA</a>
             <span class="muted">15/09 06:41</span>
           </li>
           <li>
@@ -518,11 +528,11 @@
       <h3>Notizie di oggi</h3>
       <ul class='notizie'>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNSUN0X1BTY09YLXY4X2dwc0doblQxbXRxMUExVGY0c2JoaFZubUZPdFlXTnZiX3k1S1Axc2RqcEpFOExnRFRsWWRhcS1XU2YwYnN2cW1oZ3FtM0NyUTN5OHJpSEdBTElfdUhFVTJYd2Rfb1NpWU9BNkItT2Mtd3NFRXRWU05jVjQ?oc=5" target="_blank">Tariffs, Export Controls, Sanctions, and All of the Above: A Guide to Enforcement Trends in a New National Security Era - jdsupra.com</a>
+            <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNSUN0X1BTY09YLXY4X2dwc0doblQxbXRxMUExVGY0c2JoaFZubUZPdFlXTnZiX3k1S1Axc2RqcEpFOExnRFRsWWRhcS1XU2YwYnN2cW1oZ3FtM0NyUTN5OHJpSEdBTElfdUhFVTJYd2Rfb1NpWU9BNkItT2Mtd3NFRXRWU05jVjQ?oc=5" target="_blank">Tariffs, Export Controls, Sanctions, and All of the Above: A Guide to Enforcement Trends in a New National Security Era - JD Supra</a>
             <span class="muted">15/09 02:23</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPYVlIeTVoYzRZS0NQeVVJZVlLMUN2WmNkZTBGdjJIOHVxcEh5UDhnMjM0VWNKdWNfWkpIQ21MUEx3SmJyOWNMVzVQMm1LUkVmblNic3NqbnJtUGtYb3FIUkhIVVQ2a1Fja1VlTDIyeVdWNFNrT00wVEJna3paNlVEa1oxQ1Fxby0zVEpGaFd6Wi1rSmpNZjN3d19QYjU4bzQ5SF80cHZyZURYX2d2WDJVZXptX0duUjN1bzJxc2dCdGNqQ21ZOUl2UmNvQ2JTdjl6dVRFQk5GMTBlZw?oc=5" target="_blank">Gli Stati Uniti colpiscono la russa VTB Bank con nuove sanzioni per i legami con l&#x27;Iran - MarketScreener Italia</a>
+            <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPYVlIeTVoYzRZS0NQeVVJZVlLMUN2WmNkZTBGdjJIOHVxcEh5UDhnMjM0VWNKdWNfWkpIQ21MUEx3SmJyOWNMVzVQMm1LUkVmblNic3NqbnJtUGtYb3FIUkhIVVQ2a1Fja1VlTDIyeVdWNFNrT00wVEJna3paNlVEa1oxQ1Fxby0zVEpGaFd6Wi1rSmpNZjN3d19QYjU4bzQ5SF80cHZyZURYX2d2WDJVZXptX0duUjN1bzJxc2dCdGNqQ21ZOUl2UmNvQ2JTdjl6dVRFQk5GMTBlZw?oc=5" target="_blank">Gli Stati Uniti colpiscono la russa VTB Bank con nuove sanzioni per i legami con l&#x27;Iran - it.marketscreener.com</a>
             <span class="muted">14/09 23:28</span>
           </li>
           <li>
@@ -534,7 +544,7 @@
             <span class="muted">11/09 23:34</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQVng5STdNbjByUlNfcDFWV3dhaDVNZnRmTVZRZGxKdmg4TlZPdkRmVFk0NWxHdU1VWThvNk1FRDJTRXJPaTNkVl9haE9DV2NpSDJwSUQ5WFkzVlhMb3JSTmpYUURySzlRZUJuQWF1d1lZUkp3bmt3N3ZXSGJ6ZTRKSjRJb1oyWWhVT1p2bWNPTTJOYVVGMy11bXFYdFBLMDdSSU14TmpvOE1nZTFvbnU0WEJ5QS10RWZhOVJ4dEhR?oc=5" target="_blank">Codice della strada, 85 nuove sanzioni – Ecco cosa cambia - La Nuova Sardegna</a>
+            <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQVng5STdNbjByUlNfcDFWV3dhaDVNZnRmTVZRZGxKdmg4TlZPdkRmVFk0NWxHdU1VWThvNk1FRDJTRXJPaTNkVl9haE9DV2NpSDJwSUQ5WFkzVlhMb3JSTmpYUURySzlRZUJuQWF1d1lZUkp3bmt3N3ZXSGJ6ZTRKSjRJb1oyWWhVT1p2bWNPTTJOYVVGMy11bXFYdFBLMDdSSU14TmpvOE1nZTFvbnU0WEJ5QS10RWZhOVJ4dEhR?oc=5" target="_blank">Codice della strada, 85 nuove sanzioni – Ecco cosa cambia - lanuovasardegna.it</a>
             <span class="muted">11/09 08:44</span>
           </li>
           <li>
@@ -612,12 +622,12 @@
       <h3>Notizie di oggi</h3>
       <ul class='notizie'>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPTXU5N0tnZ0pFSWgzbVpoZXdhNXpadXpGWXpEWmdrbDNMa3lNbnBFQ2Jwdk5helFyRnEySVg5TUhuczdHWllZelZnUkhFLWotTWFIY1FvUE1NOWlaakR0NXFEUUY3bzA3Tm9FZ1ozNEkxVmxRdTF0MDdJR01WMTB2Ti1lZWh2Q3RwaE9BN9IBkgFBVV95cUxNaG9wRDR6TUlYSGt1TldGZ3BfdmRkWE5hV2k0S0poT0FXRVZOd0phejlkSWVtQXB5NU5uVlVXVzVvcGFUbWRSa2dKMHlpT3VqWlRONHpmWWFQdm5PckVnVDBBMmdERnN2dVJkSG1qTk1uX205N3RLUDRnVlB4QmprdDBSOGNMODdubm5tNG5ibTlSZw?oc=5" target="_blank">Oil’s safety net is fraying as Saudi Arabia races to restart a key pipeline - CNBC</a>
-            <span class="muted">15/09 09:58</span>
+            <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVGZNVlpqdGZqMGlsa1lSR2IyWU0tbmd2R1ZkY2o5VDNlb0VsMEdhbWlZVzJBLXJ0WU9MTm13WnN2R0M0Slg4TzFkb1VSYVRxQXE5ejQ5eTNRbGcxdUVSNTFKYlk2WmxYbkdPMTJIUEZJRVdBUmFKVHVCamlsUzB2NFJLbkNGbkJFSjR3TTlhNF9vT2g4MXk0MjlzOHhVaWNGX3U3RGlUS0JzekpCb0VBbU8zMGdUbFpIaGlCVHlwcEtoR0U?oc=5" target="_blank">Oil prices climb as attacks, pipeline outage deepen Saudi supply concerns - Reuters</a>
+            <span class="muted">15/09 12:06</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY3JiM0k1cEJ2SDhnVmNCbHJpeWlQWTJyWjVTUDlSX0dhM0I4MHAwOHltcFl6WW5RazFEWE0yYk1ja0hJcnE1cWpJYVZDZFp0cW1XeVpMeXFEc01veFFRRmNZeFhkSXBIeFphV0pYU3NGZjJNbzhfRlFrUk5Gc3puWVo2SllOZm5CM19xZ2dSWGV3aGpzdkdOTFpRVHVMNDRyMTB1WWJRSVFKbVV6YXRJNG9JZU1iMk9XRF9KMlFXUHdNZw?oc=5" target="_blank">China&#x27;s August oil throughput rises as fuel exports rebound amid Iran war - Reuters</a>
-            <span class="muted">15/09 05:12</span>
+            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPTXU5N0tnZ0pFSWgzbVpoZXdhNXpadXpGWXpEWmdrbDNMa3lNbnBFQ2Jwdk5helFyRnEySVg5TUhuczdHWllZelZnUkhFLWotTWFIY1FvUE1NOWlaakR0NXFEUUY3bzA3Tm9FZ1ozNEkxVmxRdTF0MDdJR01WMTB2Ti1lZWh2Q3RwaE9BN9IBkgFBVV95cUxNaG9wRDR6TUlYSGt1TldGZ3BfdmRkWE5hV2k0S0poT0FXRVZOd0phejlkSWVtQXB5NU5uVlVXVzVvcGFUbWRSa2dKMHlpT3VqWlRONHpmWWFQdm5PckVnVDBBMmdERnN2dVJkSG1qTk1uX205N3RLUDRnVlB4QmprdDBSOGNMODdubm5tNG5ibTlSZw?oc=5" target="_blank">Oil’s safety net is fraying as Saudi Arabia races to restart a key pipeline - CNBC</a>
+            <span class="muted">15/09 09:58</span>
           </li>
           <li>
             <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOOTlTdWlFZF9mNl9uX3pCWHd0QXVWb0dEaXlGaXhLa3l4ek9PbWFhRG02VXJDMW1BT3FxUkp3MzZtdEd2ZHQ4cUswbkpfX1ZnVkxuQ3pValFrY1BTRHlyZjdaLXJqTW1VcXhzajBuSUFIbXdxamdqOTcxeFp2MERjcU9lQWVXaHhETnJweXZRdWp6UWNHQUxjdWc2NA?oc=5" target="_blank">Saudi pipeline hit by drones will be out of service for weeks, further restricting oil flow - AP News</a>
@@ -882,15 +892,15 @@
             <span class="muted">14/09 20:47</span>
           </li>
           <li>
+            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOQS02Q29NVXVkUTdscU9MNVZCejBWQ0Nld3cxcDVRR0EzU1NTaUxhMmdVTXdXTzlNSGJMUVFmMVltdGpvZWYwU1Mzc0FLVEdLeG9fSmMtdlo0MktJdXZLNy1XQU9FOC1aUXM4QUdjVGtBejQ0aGZRWEw0QnlqdjVpcERfbWtKMk9fNXpkdGtreTJzZGhkcHdFUVdtaEd6MHM?oc=5" target="_blank">If a Stock Market Crash Is Coming, History Says This 1 Move Protects Investors Every Single Time - Yahoo Finance</a>
+            <span class="muted">12/09 13:20</span>
+          </li>
+          <li>
             <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5JeTVicVRrYXVQMHZkUXZwNmwwN0lGdFRHLVZoR2NmczBJMTQwUHl4eUVMN2FaQ215Q1VneGhKMy1NQjFQM0NvWjZ4NGxQOHROVzNUVks5U2tzQUZibmtRRkl3UUY5bGJxcm1sQTBmYi1NX01lYnl5WA?oc=5" target="_blank">Four on the floor: il crollo dei mercati azionari continua mentre il petrolio sale alle stelle e i rendimenti dei titoli del Tesoro registrano un&#x27;impennata - TradingView</a>
             <span class="muted">10/09 20:17</span>
           </li>
           <li>
-            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2h0QjlLSTlBdjJIWVNYeVpsQVpWcWt5OG50VDNvYVpKSVdZVGJHX1BBVmtyTENVZWVGald6bGw2amJ4OEpXOUFpMVZmVExPRDliVmRwMmpUUDdERmMzNUdCRDlpWkg4RVMyREZPRjBpWkFVenRfOF8zU053VllFT21KaGtuS2VWN0x5eWZuLUN5NWVyVDZRbXNDSExYcE0?oc=5" target="_blank">Is a Stock Market Crash Imminent Under President Donald Trump? More Than 85 Years of Historical Precedent Offers an Answer. - Yahoo Finance</a>
-            <span class="muted">30/08 07:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWnhVR3BRM2JhcXEyamY0R3BNYTd6NEdrOHV2Q2phWTd2T2pJQTZvUUhTeDUxYk54cmhZYXB1QTdCYWxoQ0tYd0xQX2l2eWxpbnJXWktzdEVnOGpQM2hUS1RfRThQUjkyMlQ5cjlnTXNiQ2U1S0M5N2tGNUgzZ0IwVlpMUjV6OWVJRDlkeWdwdkpGcUVBYlZWYmh4ZGZ3YkIzSElsR3R4TElXR0I3TkpoN1E1RUJlNy1DVkh0SkxRT3F6WF9NcFVKRVJhVElVcmhNYzhCbmpCX1FNZFBmVGtLOUQwN2d3NVU?oc=5" target="_blank">&quot;Bagno di sangue&quot;: gli analisti reagiscono al crollo dei mercati asiatici sulla scia del selloff tecnologico - MarketScreener Italia</a>
+            <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWnhVR3BRM2JhcXEyamY0R3BNYTd6NEdrOHV2Q2phWTd2T2pJQTZvUUhTeDUxYk54cmhZYXB1QTdCYWxoQ0tYd0xQX2l2eWxpbnJXWktzdEVnOGpQM2hUS1RfRThQUjkyMlQ5cjlnTXNiQ2U1S0M5N2tGNUgzZ0IwVlpMUjV6OWVJRDlkeWdwdkpGcUVBYlZWYmh4ZGZ3YkIzSElsR3R4TElXR0I3TkpoN1E1RUJlNy1DVkh0SkxRT3F6WF9NcFVKRVJhVElVcmhNYzhCbmpCX1FNZFBmVGtLOUQwN2d3NVU?oc=5" target="_blank">&quot;Bagno di sangue&quot;: gli analisti reagiscono al crollo dei mercati asiatici sulla scia del selloff tecnologico - it.marketscreener.com</a>
             <span class="muted">17/07 07:00</span>
           </li>
           <li>
@@ -974,6 +984,7 @@
       document.getElementById('sezione-live').style.display = 'block';
       aggiornaGraficoLive();
       setInterval(aggiornaGraficoLive, 25000);
+      setInterval(aggiornaSfondo, 5 * 60 * 1000);
     } else {
       document.getElementById('nota-auto').style.display = 'inline';
     }
@@ -1048,6 +1059,20 @@
       const ultimaRiga = testo.trim().split('\n').pop();
       stato.textContent = 'Errore durante l\'aggiornamento: ' + ultimaRiga + ' (riprova tra poco)';
       btn.disabled = false;
+    }
+
+    // ogni 5 minuti rifa' tutto (prezzi, notizie, probabilita') in
+    // sottofondo, senza interrompere la lettura: avvisa con un banner
+    // cliccabile invece di ricaricare la pagina da sola.
+    async function aggiornaSfondo() {
+      try {
+        const resp = await fetch('/aggiorna', {method: 'POST'});
+        if (resp.ok) {
+          document.getElementById('banner-nuovi-dati').style.display = 'block';
+        }
+      } catch (e) {
+        // silenzioso, si ritenta al giro successivo
+      }
     }
   </script>
 </body>

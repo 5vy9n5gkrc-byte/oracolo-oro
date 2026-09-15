@@ -79,8 +79,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         pass  # niente log rumorosi nel terminale
 
 
-class Server(socketserver.TCPServer):
+class Server(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    # senza il ThreadingMixIn, mentre gira /aggiorna (10-20 secondi) il
+    # grafico live in /prezzo-live resterebbe bloccato in attesa
     allow_reuse_address = True
+    daemon_threads = True
 
 
 if __name__ == "__main__":

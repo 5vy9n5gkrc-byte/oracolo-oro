@@ -441,6 +441,12 @@ def genera_pagina(output_path="index.html"):
   #btn-aggiorna:hover {{ background: #33393f; }}
   #btn-aggiorna:disabled {{ background: #9a9a9a; cursor: default; }}
   #stato-aggiorna {{ font-size: 0.85em; }}
+  #banner-nuovi-dati {{
+    background: #fff3cd; border: 1px solid #f0d878; border-radius: 8px;
+    padding: 10px 14px; margin-bottom: 20px; cursor: pointer; font-size: 0.9em;
+    text-align: center;
+  }}
+  #banner-nuovi-dati:hover {{ background: #ffe9a8; }}
   .prezzo {{
     background: #fff; border: 1px solid #e6e0d4; border-radius: 12px;
     padding: 18px 20px; margin-bottom: 28px;
@@ -502,6 +508,10 @@ def genera_pagina(output_path="index.html"):
       <span id="stato-aggiorna" class="muted"></span>
       <span id="nota-auto" class="muted" style="display:none">Si aggiorna da solo ogni 30 minuti circa</span>
     </div>
+  </div>
+
+  <div id="banner-nuovi-dati" onclick="location.reload()" style="display:none">
+    &#8635; Nuovi dati disponibili (prezzi, notizie, probabilita') &mdash; clicca per vederli
   </div>
 
   <div class="prezzo">
@@ -573,6 +583,7 @@ def genera_pagina(output_path="index.html"):
       document.getElementById('sezione-live').style.display = 'block';
       aggiornaGraficoLive();
       setInterval(aggiornaGraficoLive, 25000);
+      setInterval(aggiornaSfondo, 5 * 60 * 1000);
     }} else {{
       document.getElementById('nota-auto').style.display = 'inline';
     }}
@@ -647,6 +658,20 @@ def genera_pagina(output_path="index.html"):
       const ultimaRiga = testo.trim().split('\\n').pop();
       stato.textContent = 'Errore durante l\\'aggiornamento: ' + ultimaRiga + ' (riprova tra poco)';
       btn.disabled = false;
+    }}
+
+    // ogni 5 minuti rifa' tutto (prezzi, notizie, probabilita') in
+    // sottofondo, senza interrompere la lettura: avvisa con un banner
+    // cliccabile invece di ricaricare la pagina da sola.
+    async function aggiornaSfondo() {{
+      try {{
+        const resp = await fetch('/aggiorna', {{method: 'POST'}});
+        if (resp.ok) {{
+          document.getElementById('banner-nuovi-dati').style.display = 'block';
+        }}
+      }} catch (e) {{
+        // silenzioso, si ritenta al giro successivo
+      }}
     }}
   </script>
 </body>
