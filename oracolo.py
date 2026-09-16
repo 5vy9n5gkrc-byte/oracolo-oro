@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import html
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from event_study import abnormal_returns, ESTIM_WINDOW, ESTIM_GAP
 from eventi_storici import load_eventi_storici
@@ -149,7 +150,7 @@ def render_notizie(notizie):
         return '<p class="muted">Nessuna notizia recente trovata per questa categoria.</p>'
     righe = []
     for n in notizie:
-        data_str = n["data"].strftime("%d/%m %H:%M") if n["data"] else ""
+        data_str = n["data"].astimezone(ZoneInfo("Europe/Rome")).strftime("%d/%m %H:%M") if n["data"] else ""
         righe.append(f"""
           <li>
             <a href="{html.escape(n['link'])}" target="_blank">{html.escape(n['titolo'])}</a>
@@ -382,7 +383,10 @@ def genera_pagina(output_path="index.html"):
         for cat, casi in casi_per_categoria.items()
     }
 
-    aggiornato = datetime.now().strftime("%d/%m/%Y alle %H:%M")
+    # datetime.now() da solo darebbe l'ora UTC quando lo script gira su
+    # GitHub Actions (i loro computer sono sempre in UTC): forziamo
+    # l'ora italiana cosi' il dato mostrato e' coerente ovunque giri.
+    aggiornato = datetime.now(ZoneInfo("Europe/Rome")).strftime("%d/%m/%Y alle %H:%M")
 
     sezioni = "".join(
         render_sezione(cat, notizie_per_categoria.get(cat, []),
