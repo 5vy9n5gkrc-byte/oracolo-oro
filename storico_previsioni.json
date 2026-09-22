@@ -70,6 +70,10 @@
       "1 giorno": {
         "salita": false,
         "variazione": -0.6114432828691951
+      },
+      "1 settimana": {
+        "salita": true,
+        "variazione": 0.7174708666102037
       }
     }
   },
@@ -200,6 +204,41 @@
       "combinato": {
         "1 giorno": {
           "p_su": 0.5729152426520848
+        },
+        "1 settimana": {
+          "p_su": 0.6474764756201883
+        }
+      }
+    },
+    "esito": {
+      "1 giorno": {
+        "salita": false,
+        "variazione": -0.3519502967493149
+      }
+    }
+  },
+  {
+    "data": "2026-09-22",
+    "previsioni": {
+      "geopolitica": {
+        "1 giorno": {
+          "p_su": 0.5818181818181818
+        },
+        "1 settimana": {
+          "p_su": 0.6727272727272727
+        }
+      },
+      "oscillazioni": {
+        "1 giorno": {
+          "p_su": 0.5400557991231566
+        },
+        "1 settimana": {
+          "p_su": 0.5548902195608783
+        }
+      },
+      "combinato": {
+        "1 giorno": {
+          "p_su": 0.572869099812105
         },
         "1 settimana": {
           "p_su": 0.6474764756201883
