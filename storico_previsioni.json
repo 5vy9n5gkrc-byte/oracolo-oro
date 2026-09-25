@@ -148,6 +148,10 @@
       "1 giorno": {
         "salita": true,
         "variazione": 0.7053991815196836
+      },
+      "1 settimana": {
+        "salita": false,
+        "variazione": -1.6743606675931
       }
     }
   },
@@ -214,7 +218,12 @@
         }
       }
     },
-    "esito": {}
+    "esito": {
+      "1 giorno": {
+        "salita": false,
+        "variazione": -1.797186069881862
+      }
+    }
   },
   {
     "data": "2026-09-21",
@@ -299,7 +308,7 @@
       },
       "oscillazioni": {
         "1 giorno": {
-          "p_su": 0.539872408293461
+          "p_su": 0.5400557991231566
         },
         "1 settimana": {
           "p_su": 0.5369261477045908
@@ -307,7 +316,7 @@
       },
       "combinato": {
         "1 giorno": {
-          "p_su": 0.5728298017771702
+          "p_su": 0.572869099812105
         },
         "1 settimana": {
           "p_su": 0.6436270316509838
