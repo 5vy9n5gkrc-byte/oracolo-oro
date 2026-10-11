@@ -729,10 +729,10 @@
     "previsioni": {
       "geopolitica": {
         "1 giorno": {
-          "p_su": 0.5818181818181818
+          "p_su": null
         },
         "1 settimana": {
-          "p_su": 0.6727272727272727
+          "p_su": null
         }
       },
       "oscillazioni": {
@@ -745,10 +745,10 @@
       },
       "combinato": {
         "1 giorno": {
-          "p_su": 0.573164484917473
+          "p_su": 0.5414342629482072
         },
         "1 settimana": {
-          "p_su": 0.6433978372225385
+          "p_su": 0.5358565737051793
         }
       }
     },

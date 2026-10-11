@@ -86,7 +86,7 @@
 <body>
   <h1>Oracolo dell'Oro</h1>
   <div class="riga-intestazione">
-    <div class="aggiornato">Aggiornato il 12/10/2026 alle 01:07</div>
+    <div class="aggiornato">Aggiornato il 12/10/2026 alle 01:43</div>
     <div class="blocco-aggiorna">
       <button id="btn-aggiorna" onclick="aggiornaDati()" style="display:none">&#8635; Aggiorna dati</button>
       <span id="stato-aggiorna" class="muted"></span>
@@ -100,11 +100,11 @@
 
   <div class="prezzo">
     <div class="muted">Prezzo oro (future COMEX, USD/oncia)</div>
-    <div class="valore">$4,209.40</div>
-    <div class="var" style="color:#cf222e">-0.16% oggi</div>
-    <div class="range-oggi muted">Range odierno: -0.17% / +0.13% ($4,209.30 &ndash; $4,221.70)</div>
+    <div class="valore">$4,221.00</div>
+    <div class="var" style="color:#1a7f37">+0.11% oggi</div>
+    <div class="range-oggi muted">Range odierno: -0.17% / +0.13% ($4,209.10 &ndash; $4,221.80)</div>
     <div class="range-oggi muted">Apertura: $4,220.80 (+0.11%) &middot; Chiusura precedente: $4,216.30</div>
-    <div class="range-oggi muted">Mercato aperto (ora di New York 19:07)</div>
+    <div class="range-oggi muted">Mercato aperto (ora di New York 19:41)</div>
   </div>
 
   <section class="categoria" id="sezione-live" style="display:none">
@@ -122,20 +122,8 @@
         <div class="prev-card">
           <h3>1. Solo geopolitica</h3>
           <p class="muted">Basato solo sui casi storici reali delle categorie con notizie oggi.</p>
-          <p class="muted">Categorie con notizie attive oggi: Escalation militare, De-escalation militare, Sanzioni, Shock energetico, Instabilita' politica, Politica monetaria, Crisi finanziaria.</p>
-          <h4>1 giorno</h4>
-      <div class="prev-riga">
-        <div class="prev-barra"><div class="prev-riempi" style="width:50%; background:#1a7f37"></div></div>
-        <div><b style="color:#1a7f37">50% probabilita' di salita</b>
-          <span class="muted">(50% di discesa &middot; n=55)</span></div>
-        <p class="muted">Autocorretto: finora ha indovinato la direzione il 47% delle volte (n=19) &rarr; fiducia scalata di conseguenza.</p>
-      </div><h4>1 settimana</h4>
-      <div class="prev-riga">
-        <div class="prev-barra"><div class="prev-riempi" style="width:50%; background:#1a7f37"></div></div>
-        <div><b style="color:#1a7f37">50% probabilita' di salita</b>
-          <span class="muted">(50% di discesa &middot; n=55)</span></div>
-        <p class="muted">Autocorretto: finora ha indovinato la direzione il 27% delle volte (n=15) &rarr; fiducia scalata di conseguenza.</p>
-      </div>
+          <p class="muted">Nessuna categoria con notizie rilevanti oggi: questo modello non ha un segnale da dare.</p>
+          <h4>1 giorno</h4><div class="prev-riga muted">dati insufficienti</div><h4>1 settimana</h4><div class="prev-riga muted">dati insufficienti</div>
         </div>
         <div class="prev-card">
           <h3>2. Solo oscillazioni storiche</h3>
@@ -163,13 +151,13 @@
       <div class="prev-riga">
         <div class="prev-barra"><div class="prev-riempi" style="width:50%; background:#1a7f37"></div></div>
         <div><b style="color:#1a7f37">50% probabilita' di salita</b>
-          <span class="muted">(50% di discesa &middot; n=55)</span></div>
+          <span class="muted">(50% di discesa &middot; n=0)</span></div>
         <p class="muted">Autocorretto: finora ha indovinato la direzione il 47% delle volte (n=19) &rarr; fiducia scalata di conseguenza.</p>
       </div><h4>1 settimana</h4>
       <div class="prev-riga">
         <div class="prev-barra"><div class="prev-riempi" style="width:50%; background:#1a7f37"></div></div>
         <div><b style="color:#1a7f37">50% probabilita' di salita</b>
-          <span class="muted">(50% di discesa &middot; n=55)</span></div>
+          <span class="muted">(50% di discesa &middot; n=0)</span></div>
         <p class="muted">Autocorretto: finora ha indovinato la direzione il 27% delle volte (n=15) &rarr; fiducia scalata di conseguenza.</p>
       </div>
         </div></div>
@@ -193,7 +181,7 @@
     <p class="muted">I numeri colorati indicano i grandi periodi di trend descritti sotto.</p>
     
     <svg viewBox="0 0 720 340" width="100%" style="max-width:720px; height:auto;">
-      <line x1="60" y1="310.0" x2="700" y2="310.0" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="313.0" font-size="10" text-anchor="end" fill="#57606a">$962</text><line x1="60" y1="216.7" x2="700" y2="216.7" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="219.7" font-size="10" text-anchor="end" fill="#57606a">$2,522</text><line x1="60" y1="123.3" x2="700" y2="123.3" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="126.3" font-size="10" text-anchor="end" fill="#57606a">$4,081</text><line x1="60" y1="30.0" x2="700" y2="30.0" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="33.0" font-size="10" text-anchor="end" fill="#57606a">$5,640</text><rect x="60.0" y="30" width="142.2" height="280" fill="#8ecae6" opacity="0.30"/><circle cx="131.1" cy="42" r="10" fill="#8ecae6" stroke="#fff" stroke-width="1.5"/><text x="131.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">1</text><rect x="202.4" y="30" width="102.4" height="280" fill="#ffb703" opacity="0.30"/><circle cx="253.6" cy="42" r="10" fill="#ffb703" stroke="#fff" stroke-width="1.5"/><text x="253.6" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">2</text><rect x="305.0" y="30" width="89.4" height="280" fill="#c9ada7" opacity="0.30"/><circle cx="349.7" cy="42" r="10" fill="#c9ada7" stroke="#fff" stroke-width="1.5"/><text x="349.7" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">3</text><rect x="394.6" y="30" width="53.1" height="280" fill="#a3c4bc" opacity="0.30"/><circle cx="421.1" cy="42" r="10" fill="#a3c4bc" stroke="#fff" stroke-width="1.5"/><text x="421.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">4</text><rect x="447.9" y="30" width="74.5" height="280" fill="#bde0fe" opacity="0.30"/><circle cx="485.1" cy="42" r="10" fill="#bde0fe" stroke="#fff" stroke-width="1.5"/><text x="485.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">5</text><rect x="522.6" y="30" width="64.0" height="280" fill="#ffc8dd" opacity="0.30"/><circle cx="554.6" cy="42" r="10" fill="#ffc8dd" stroke="#fff" stroke-width="1.5"/><text x="554.6" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">6</text><rect x="586.7" y="30" width="109.1" height="280" fill="#cdb4db" opacity="0.30"/><circle cx="641.3" cy="42" r="10" fill="#cdb4db" stroke="#fff" stroke-width="1.5"/><text x="641.3" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">7</text><polyline points="60.9,289.4 62.1,288.4 63.3,287.9 64.6,286.1 65.8,289.1 67.0,292.2 68.2,293.8 69.5,294.1 70.7,295.3 71.9,296.8 73.2,296.9 74.4,295.8 75.6,294.4 76.8,292.8 78.1,292.2 79.3,293.2 80.5,291.5 81.7,290.6 83.0,290.5 84.2,289.2 85.4,290.6 86.7,292.4 87.9,291.0 89.1,289.7 90.3,289.8 91.6,289.3 92.8,287.3 94.0,287.5 95.2,288.5 96.5,290.9 97.7,291.1 98.9,289.4 100.2,288.6 101.4,287.9 102.6,288.6 103.8,289.4 105.1,289.4 106.3,290.3 107.5,292.1 108.7,291.1 110.0,289.5 111.2,288.5 112.4,289.2 113.7,287.2 114.9,287.5 116.1,287.2 117.3,285.0 118.6,283.8 119.8,285.4 121.0,286.9 122.2,287.9 123.5,288.3 124.7,286.5 125.9,287.9 127.2,288.4 128.4,288.6 129.6,288.2 130.8,287.1 132.1,287.5 133.3,287.9 134.5,290.0 135.7,289.5 137.0,288.4 138.2,286.6 139.4,285.5 140.7,284.4 141.9,284.8 143.1,283.7 144.3,284.8 145.6,285.9 146.8,283.8 148.0,285.0 149.2,285.4 150.5,285.3 151.7,286.0 152.9,284.0 154.2,285.2 155.4,284.8 156.6,284.1 157.8,284.6 159.1,285.4 160.3,286.0 161.5,285.7 162.8,287.4 164.0,286.9 165.2,287.3 166.4,287.0 167.7,288.1 168.9,288.8 170.1,289.9 171.3,289.7 172.6,290.5 173.8,291.2 175.0,291.7 176.3,292.3 177.5,292.5 178.7,294.1 179.9,292.8 181.2,293.2 182.4,293.4 183.6,293.6 184.8,293.2 186.1,293.7 187.3,293.0 188.5,292.1 189.8,291.6 191.0,291.1 192.2,291.2 193.4,292.6 194.7,291.8 195.9,291.8 197.1,291.9 198.3,290.2 199.6,290.9 200.8,289.8 202.0,288.3 203.3,288.0 204.5,287.8 205.7,288.3 206.9,287.1 208.2,286.0 209.4,286.2 210.6,285.8 211.8,285.4 213.1,287.7 214.3,287.1 215.5,287.0 216.8,286.4 218.0,287.7 219.2,287.7 220.4,287.8 221.7,288.7 222.9,288.1 224.1,288.6 225.3,288.0 226.6,288.6 227.8,288.1 229.0,286.8 230.3,284.7 231.5,284.7 232.7,281.1 233.9,280.3 235.2,281.0 236.4,280.1 237.6,279.5 238.8,280.0 240.1,278.6 241.3,275.1 242.5,274.1 243.8,273.1 245.0,273.4 246.2,274.6 247.4,275.8 248.7,273.9 249.9,275.2 251.1,274.6 252.4,275.9 253.6,275.6 254.8,274.7 256.0,274.2 257.3,277.6 258.5,277.0 259.7,277.4 260.9,277.3 262.2,277.4 263.4,276.5 264.6,276.2 265.9,274.4 267.1,272.0 268.3,271.4 269.5,271.6 270.8,270.6 272.0,269.8 273.2,270.8 274.4,270.0 275.7,266.2 276.9,270.4 278.1,264.4 279.4,273.7 280.6,275.8 281.8,267.9 283.0,267.6 284.3,263.6 285.5,263.7 286.7,261.0 287.9,262.9 289.2,262.5 290.4,260.2 291.6,260.7 292.9,260.9 294.1,264.1 295.3,261.1 296.5,260.1 297.8,258.5 299.0,258.2 300.2,256.8 301.4,256.1 302.7,250.5 303.9,246.1 305.1,242.6 306.4,248.0 307.6,248.3 308.8,246.8 310.0,248.6 311.3,248.1 312.5,247.6 313.7,253.0 314.9,250.6 316.2,249.0 317.4,250.8 318.6,250.6 319.9,252.2 321.1,247.6 322.3,251.5 323.5,252.5 324.8,257.7 326.0,254.7 327.2,254.6 328.4,252.0 329.7,252.1 330.9,250.7 332.1,254.0 333.4,255.5 334.6,253.7 335.8,254.5 337.0,256.3 338.3,255.8 339.5,258.2 340.7,261.6 342.0,263.3 343.2,261.8 344.4,260.7 345.6,261.3 346.9,261.5 348.1,260.6 349.3,258.6 350.5,258.6 351.8,259.1 353.0,255.2 354.2,254.5 355.5,252.3 356.7,250.7 357.9,251.5 359.1,252.5 360.4,259.5 361.6,258.5 362.8,258.0 364.0,256.7 365.3,256.6 366.5,257.2 367.7,256.3 369.0,259.7 370.2,258.6 371.4,258.4 372.6,256.1 373.9,255.5 375.1,258.1 376.3,260.3 377.5,260.6 378.8,259.8 380.0,260.0 381.2,259.3 382.5,257.7 383.7,258.4 384.9,256.3 386.1,253.3 387.4,254.5 388.6,258.3 389.8,258.4 391.0,258.5 392.3,257.7 393.5,256.9 394.7,255.6 396.0,257.7 397.2,256.4 398.4,255.5 399.6,258.1 400.9,257.0 402.1,253.7 403.3,251.6 404.5,251.9 405.8,247.3 407.0,246.3 408.2,250.1 409.5,248.1 410.7,250.0 411.9,248.7 413.1,247.0 414.4,249.5 415.6,251.7 416.8,252.7 418.0,257.0 419.3,254.9 420.5,254.4 421.7,254.5 423.0,253.3 424.2,255.4 425.4,256.2 426.6,257.3 427.9,261.3 429.1,263.4 430.3,262.3 431.6,260.1 432.8,259.3 434.0,257.6 435.2,261.0 436.5,261.6 437.7,263.3 438.9,262.9 440.1,265.5 441.4,267.4 442.6,266.3 443.8,264.2 445.1,267.4 446.3,266.6 447.5,267.3 448.7,265.1 450.0,259.8 451.2,260.9 452.4,260.7 453.6,258.0 454.9,258.2 456.1,258.3 457.3,258.0 458.6,256.5 459.8,253.8 461.0,250.5 462.2,250.1 463.5,250.2 464.7,254.0 465.9,254.0 467.1,255.4 468.4,257.3 469.6,254.6 470.8,253.7 472.1,247.2 473.3,247.3 474.5,247.6 475.7,245.4 477.0,245.5 478.2,246.9 479.4,246.5 480.6,244.8 481.9,245.2 483.1,247.3 484.3,249.1 485.6,249.0 486.8,248.3 488.0,248.6 489.2,250.9 490.5,250.8 491.7,250.6 492.9,248.7 494.1,248.2 495.4,248.5 496.6,249.5 497.8,251.2 499.1,252.7 500.3,251.2 501.5,249.6 502.7,250.9 504.0,250.8 505.2,250.6 506.4,255.3 507.6,256.4 508.9,250.4 510.1,247.3 511.3,245.6 512.6,246.5 513.8,250.0 515.0,247.3 516.2,246.1 517.5,241.8 518.7,246.0 519.9,245.1 521.2,242.9 522.4,242.4 523.6,243.5 524.8,243.3 526.1,244.5 527.3,245.1 528.5,244.0 529.7,244.7 531.0,245.5 532.2,244.0 533.4,241.2 534.7,235.5 535.9,236.8 537.1,236.3 538.3,232.8 539.6,226.7 540.8,225.5 542.0,222.8 543.2,225.7 544.5,228.1 545.7,224.3 546.9,221.1 548.2,226.1 549.4,226.5 550.6,229.0 551.8,226.3 553.1,226.9 554.3,226.7 555.5,222.9 556.7,221.4 558.0,222.3 559.2,223.1 560.4,220.0 561.7,220.5 562.9,215.6 564.1,215.6 565.3,216.1 566.6,216.5 567.8,211.2 569.0,208.9 570.2,207.1 571.5,207.1 572.7,206.8 573.9,203.0 575.2,201.6 576.4,202.2 577.6,205.2 578.8,212.6 580.1,203.9 581.3,206.7 582.5,208.4 583.7,207.6 585.0,209.0 586.2,209.5 587.4,208.1 588.7,205.0 589.9,204.3 591.1,200.1 592.3,198.2 593.6,194.7 594.8,193.1 596.0,190.2 597.2,195.1 598.5,191.8 599.7,187.3 600.9,185.2 602.2,181.5 603.4,184.3 604.6,172.4 605.8,167.1 607.1,168.0 608.3,172.4 609.5,166.6 610.8,174.8 612.0,164.7 613.2,168.7 614.4,167.7 615.7,160.4 616.9,164.4 618.1,170.3 619.3,166.4 620.6,165.1 621.8,165.6 623.0,166.2 624.3,165.1 625.5,162.5 626.7,166.2 627.9,164.1 629.2,159.2 630.4,150.7 631.6,147.9 632.8,145.4 634.1,140.4 635.3,133.3 636.5,125.8 637.8,112.8 639.0,120.3 640.2,126.4 641.4,126.3 642.7,121.3 643.9,122.4 645.1,113.5 646.3,114.4 647.6,108.5 648.8,106.2 650.0,94.6 651.3,106.7 652.5,96.1 653.7,91.6 654.9,67.6 656.2,76.1 657.4,69.2 658.6,64.5 659.8,60.6 661.1,50.7 662.3,57.4 663.5,65.7 664.8,96.8 666.0,95.9 667.2,86.3 668.4,81.2 669.7,75.5 670.9,83.8 672.1,90.4 673.3,83.4 674.6,94.2 675.8,96.5 677.0,94.3 678.3,108.0 679.5,114.4 680.7,114.0 681.9,122.8 683.2,119.9 684.4,120.6 685.6,126.2 686.8,124.0 688.1,124.2 689.3,106.6 690.5,104.6 691.8,90.2 693.0,99.7 694.2,101.1 695.4,106.4 696.7,104.8 697.9,109.9 699.1,118.6 700.4,115.7" fill="none" stroke="#b8860b" stroke-width="1.8"/><text x="74.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2017</text><text x="138.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2018</text><text x="202.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2019</text><text x="266.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2020</text><text x="330.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2021</text><text x="394.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2022</text><text x="458.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2023</text><text x="522.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2024</text><text x="586.7" y="330" font-size="10" text-anchor="middle" fill="#57606a">2025</text><text x="650.7" y="330" font-size="10" text-anchor="middle" fill="#57606a">2026</text>
+      <line x1="60" y1="310.0" x2="700" y2="310.0" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="313.0" font-size="10" text-anchor="end" fill="#57606a">$965</text><line x1="60" y1="216.7" x2="700" y2="216.7" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="219.7" font-size="10" text-anchor="end" fill="#57606a">$2,529</text><line x1="60" y1="123.3" x2="700" y2="123.3" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="126.3" font-size="10" text-anchor="end" fill="#57606a">$4,092</text><line x1="60" y1="30.0" x2="700" y2="30.0" stroke="#e6e0d4" stroke-width="1"/><text x="52" y="33.0" font-size="10" text-anchor="end" fill="#57606a">$5,656</text><rect x="60.0" y="30" width="142.2" height="280" fill="#8ecae6" opacity="0.30"/><circle cx="131.1" cy="42" r="10" fill="#8ecae6" stroke="#fff" stroke-width="1.5"/><text x="131.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">1</text><rect x="202.4" y="30" width="102.4" height="280" fill="#ffb703" opacity="0.30"/><circle cx="253.6" cy="42" r="10" fill="#ffb703" stroke="#fff" stroke-width="1.5"/><text x="253.6" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">2</text><rect x="305.0" y="30" width="89.4" height="280" fill="#c9ada7" opacity="0.30"/><circle cx="349.7" cy="42" r="10" fill="#c9ada7" stroke="#fff" stroke-width="1.5"/><text x="349.7" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">3</text><rect x="394.6" y="30" width="53.1" height="280" fill="#a3c4bc" opacity="0.30"/><circle cx="421.1" cy="42" r="10" fill="#a3c4bc" stroke="#fff" stroke-width="1.5"/><text x="421.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">4</text><rect x="447.9" y="30" width="74.5" height="280" fill="#bde0fe" opacity="0.30"/><circle cx="485.1" cy="42" r="10" fill="#bde0fe" stroke="#fff" stroke-width="1.5"/><text x="485.1" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">5</text><rect x="522.6" y="30" width="64.0" height="280" fill="#ffc8dd" opacity="0.30"/><circle cx="554.6" cy="42" r="10" fill="#ffc8dd" stroke="#fff" stroke-width="1.5"/><text x="554.6" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">6</text><rect x="586.7" y="30" width="109.1" height="280" fill="#cdb4db" opacity="0.30"/><circle cx="641.3" cy="42" r="10" fill="#cdb4db" stroke="#fff" stroke-width="1.5"/><text x="641.3" y="46" font-size="11" font-weight="600" text-anchor="middle" fill="#1f2328">7</text><polyline points="60.9,289.4 62.1,288.4 63.3,287.9 64.6,286.1 65.8,289.1 67.0,292.2 68.2,293.8 69.5,294.1 70.7,295.3 71.9,296.8 73.2,296.9 74.4,295.8 75.6,294.4 76.8,292.8 78.1,292.2 79.3,293.2 80.5,291.5 81.7,290.6 83.0,290.5 84.2,289.2 85.4,290.6 86.7,292.4 87.9,291.0 89.1,289.7 90.3,289.8 91.6,289.3 92.8,287.3 94.0,287.5 95.2,288.5 96.5,290.9 97.7,291.1 98.9,289.4 100.2,288.6 101.4,287.9 102.6,288.6 103.8,289.4 105.1,289.4 106.3,290.3 107.5,292.1 108.7,291.1 110.0,289.5 111.2,288.5 112.4,289.2 113.7,287.2 114.9,287.5 116.1,287.2 117.3,285.0 118.6,283.8 119.8,285.4 121.0,286.9 122.2,287.9 123.5,288.3 124.7,286.5 125.9,287.9 127.2,288.4 128.4,288.6 129.6,288.2 130.8,287.1 132.1,287.5 133.3,287.9 134.5,290.0 135.7,289.5 137.0,288.4 138.2,286.6 139.4,285.5 140.7,284.4 141.9,284.8 143.1,283.7 144.3,284.8 145.6,285.9 146.8,283.8 148.0,285.0 149.2,285.4 150.5,285.3 151.7,286.0 152.9,284.0 154.2,285.2 155.4,284.8 156.6,284.1 157.8,284.6 159.1,285.4 160.3,286.0 161.5,285.7 162.8,287.4 164.0,286.9 165.2,287.3 166.4,287.0 167.7,288.1 168.9,288.8 170.1,289.9 171.3,289.7 172.6,290.5 173.8,291.2 175.0,291.7 176.3,292.3 177.5,292.5 178.7,294.1 179.9,292.8 181.2,293.2 182.4,293.4 183.6,293.6 184.8,293.2 186.1,293.7 187.3,293.0 188.5,292.1 189.8,291.6 191.0,291.1 192.2,291.2 193.4,292.6 194.7,291.8 195.9,291.8 197.1,291.9 198.3,290.2 199.6,290.9 200.8,289.8 202.0,288.3 203.3,288.0 204.5,287.8 205.7,288.3 206.9,287.1 208.2,286.0 209.4,286.2 210.6,285.8 211.8,285.4 213.1,287.7 214.3,287.1 215.5,287.0 216.8,286.4 218.0,287.7 219.2,287.7 220.4,287.8 221.7,288.7 222.9,288.1 224.1,288.6 225.3,288.0 226.6,288.6 227.8,288.1 229.0,286.8 230.3,284.7 231.5,284.7 232.7,281.1 233.9,280.3 235.2,281.0 236.4,280.1 237.6,279.5 238.8,280.0 240.1,278.6 241.3,275.1 242.5,274.1 243.8,273.1 245.0,273.4 246.2,274.6 247.4,275.8 248.7,273.9 249.9,275.2 251.1,274.6 252.4,275.9 253.6,275.6 254.8,274.7 256.0,274.2 257.3,277.6 258.5,277.0 259.7,277.4 260.9,277.3 262.2,277.4 263.4,276.5 264.6,276.2 265.9,274.4 267.1,272.0 268.3,271.4 269.5,271.6 270.8,270.6 272.0,269.8 273.2,270.8 274.4,270.0 275.7,266.2 276.9,270.4 278.1,264.4 279.4,273.7 280.6,275.8 281.8,267.9 283.0,267.6 284.3,263.6 285.5,263.7 286.7,261.0 287.9,262.9 289.2,262.5 290.4,260.2 291.6,260.7 292.9,260.9 294.1,264.1 295.3,261.1 296.5,260.1 297.8,258.5 299.0,258.2 300.2,256.8 301.4,256.1 302.7,250.5 303.9,246.1 305.1,242.6 306.4,248.0 307.6,248.3 308.8,246.8 310.0,248.6 311.3,248.1 312.5,247.6 313.7,253.0 314.9,250.6 316.2,249.0 317.4,250.8 318.6,250.6 319.9,252.2 321.1,247.6 322.3,251.5 323.5,252.5 324.8,257.7 326.0,254.7 327.2,254.6 328.4,252.0 329.7,252.1 330.9,250.7 332.1,254.0 333.4,255.5 334.6,253.7 335.8,254.5 337.0,256.3 338.3,255.8 339.5,258.2 340.7,261.6 342.0,263.3 343.2,261.8 344.4,260.7 345.6,261.3 346.9,261.5 348.1,260.6 349.3,258.6 350.5,258.6 351.8,259.1 353.0,255.2 354.2,254.5 355.5,252.3 356.7,250.7 357.9,251.5 359.1,252.5 360.4,259.5 361.6,258.5 362.8,258.0 364.0,256.7 365.3,256.6 366.5,257.2 367.7,256.3 369.0,259.7 370.2,258.6 371.4,258.4 372.6,256.1 373.9,255.5 375.1,258.1 376.3,260.3 377.5,260.6 378.8,259.8 380.0,260.0 381.2,259.3 382.5,257.7 383.7,258.4 384.9,256.3 386.1,253.3 387.4,254.5 388.6,258.3 389.8,258.4 391.0,258.5 392.3,257.7 393.5,256.9 394.7,255.6 396.0,257.7 397.2,256.4 398.4,255.5 399.6,258.1 400.9,257.0 402.1,253.7 403.3,251.6 404.5,251.9 405.8,247.3 407.0,246.3 408.2,250.1 409.5,248.1 410.7,250.0 411.9,248.7 413.1,247.0 414.4,249.5 415.6,251.7 416.8,252.7 418.0,257.0 419.3,254.9 420.5,254.4 421.7,254.5 423.0,253.3 424.2,255.4 425.4,256.2 426.6,257.3 427.9,261.3 429.1,263.4 430.3,262.3 431.6,260.1 432.8,259.3 434.0,257.6 435.2,261.0 436.5,261.6 437.7,263.3 438.9,262.9 440.1,265.5 441.4,267.4 442.6,266.3 443.8,264.2 445.1,267.4 446.3,266.6 447.5,267.3 448.7,265.1 450.0,259.8 451.2,260.9 452.4,260.7 453.6,258.0 454.9,258.2 456.1,258.3 457.3,258.0 458.6,256.5 459.8,253.8 461.0,250.5 462.2,250.1 463.5,250.2 464.7,254.0 465.9,254.0 467.1,255.4 468.4,257.3 469.6,254.6 470.8,253.7 472.1,247.2 473.3,247.3 474.5,247.6 475.7,245.4 477.0,245.5 478.2,246.9 479.4,246.5 480.6,244.8 481.9,245.2 483.1,247.3 484.3,249.1 485.6,249.0 486.8,248.3 488.0,248.6 489.2,250.9 490.5,250.8 491.7,250.6 492.9,248.7 494.1,248.2 495.4,248.5 496.6,249.5 497.8,251.2 499.1,252.7 500.3,251.2 501.5,249.6 502.7,250.9 504.0,250.8 505.2,250.6 506.4,255.3 507.6,256.4 508.9,250.4 510.1,247.3 511.3,245.6 512.6,246.5 513.8,250.0 515.0,247.3 516.2,246.1 517.5,241.8 518.7,246.0 519.9,245.1 521.2,242.9 522.4,242.4 523.6,243.5 524.8,243.3 526.1,244.5 527.3,245.1 528.5,244.0 529.7,244.7 531.0,245.5 532.2,244.0 533.4,241.2 534.7,235.5 535.9,236.8 537.1,236.3 538.3,232.8 539.6,226.7 540.8,225.5 542.0,222.8 543.2,225.7 544.5,228.1 545.7,224.3 546.9,221.1 548.2,226.1 549.4,226.5 550.6,229.0 551.8,226.3 553.1,226.9 554.3,226.7 555.5,222.9 556.7,221.4 558.0,222.3 559.2,223.1 560.4,220.0 561.7,220.5 562.9,215.6 564.1,215.6 565.3,216.1 566.6,216.5 567.8,211.2 569.0,208.9 570.2,207.1 571.5,207.1 572.7,206.8 573.9,203.0 575.2,201.6 576.4,202.2 577.6,205.2 578.8,212.6 580.1,203.9 581.3,206.7 582.5,208.4 583.7,207.6 585.0,209.0 586.2,209.5 587.4,208.1 588.7,205.0 589.9,204.3 591.1,200.1 592.3,198.2 593.6,194.7 594.8,193.1 596.0,190.2 597.2,195.1 598.5,191.8 599.7,187.3 600.9,185.2 602.2,181.5 603.4,184.3 604.6,172.4 605.8,167.1 607.1,168.0 608.3,172.4 609.5,166.6 610.8,174.8 612.0,164.7 613.2,168.7 614.4,167.7 615.7,160.4 616.9,164.4 618.1,170.3 619.3,166.4 620.6,165.1 621.8,165.6 623.0,166.2 624.3,165.1 625.5,162.5 626.7,166.2 627.9,164.1 629.2,159.2 630.4,150.7 631.6,147.9 632.8,145.4 634.1,140.4 635.3,133.3 636.5,125.8 637.8,112.8 639.0,120.3 640.2,126.4 641.4,126.3 642.7,121.3 643.9,122.4 645.1,113.5 646.3,114.4 647.6,108.5 648.8,106.2 650.0,94.6 651.3,106.7 652.5,96.1 653.7,91.6 654.9,67.6 656.2,76.1 657.4,69.2 658.6,64.5 659.8,60.6 661.1,50.7 662.3,57.4 663.5,65.7 664.8,96.8 666.0,95.9 667.2,86.3 668.4,81.2 669.7,75.5 670.9,83.8 672.1,90.4 673.3,83.4 674.6,94.2 675.8,96.5 677.0,94.3 678.3,108.0 679.5,114.4 680.7,114.0 681.9,122.8 683.2,119.9 684.4,120.6 685.6,126.2 686.8,124.0 688.1,124.2 689.3,106.6 690.5,104.6 691.8,90.2 693.0,99.7 694.2,101.1 695.4,106.4 696.7,104.8 697.9,109.9 699.1,118.6 700.4,115.7" fill="none" stroke="#b8860b" stroke-width="1.8"/><text x="74.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2017</text><text x="138.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2018</text><text x="202.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2019</text><text x="266.4" y="330" font-size="10" text-anchor="middle" fill="#57606a">2020</text><text x="330.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2021</text><text x="394.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2022</text><text x="458.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2023</text><text x="522.6" y="330" font-size="10" text-anchor="middle" fill="#57606a">2024</text><text x="586.7" y="330" font-size="10" text-anchor="middle" fill="#57606a">2025</text><text x="650.7" y="330" font-size="10" text-anchor="middle" fill="#57606a">2026</text>
     </svg>
     
   </section>
@@ -224,7 +212,7 @@
             <h3 class="trend-titolo">Consolidamento con i tassi Fed in salita</h3>
             <p class="muted">
               10/2016 &ndash; 12/2018 &middot;
-              da $1,309 a $1,327 &middot;
+              da $1,312 a $1,331 &middot;
               <b style="color:#1a7f37">+1%</b>
             </p>
             <p>La Federal Reserve alza gradualmente i tassi e il dollaro resta forte: senza un forte motivo per comprare oro, il prezzo si muove lateralmente.</p>
@@ -237,7 +225,7 @@
             <h3 class="trend-titolo">Corsa al record storico: guerra commerciale e COVID-19</h3>
             <p class="muted">
               01/2019 &ndash; 08/2020 &middot;
-              da $1,328 a $2,089 &middot;
+              da $1,332 a $2,094 &middot;
               <b style="color:#1a7f37">+57%</b>
             </p>
             <p>Prima la guerra commerciale USA-Cina, poi la pandemia: i tassi reali crollano sotto zero e le banche centrali inondano i mercati di liquidita&#x27;. L&#x27;oro tocca un record storico ad agosto 2020.</p>
@@ -250,7 +238,7 @@
             <h3 class="trend-titolo">Ritracciamento dopo il record</h3>
             <p class="muted">
               08/2020 &ndash; 12/2021 &middot;
-              da $2,081 a $1,871 &middot;
+              da $2,087 a $1,876 &middot;
               <b style="color:#cf222e">-10%</b>
             </p>
             <p>Con i vaccini e la riapertura dell&#x27;economia, i mercati iniziano ad aspettarsi una stretta monetaria: l&#x27;oro perde parte dei guadagni.</p>
@@ -263,7 +251,7 @@
             <h3 class="trend-titolo">L&#x27;oro fatica nonostante la guerra in Ucraina</h3>
             <p class="muted">
               01/2022 &ndash; 10/2022 &middot;
-              da $1,842 a $1,663 &middot;
+              da $1,848 a $1,667 &middot;
               <b style="color:#cf222e">-10%</b>
             </p>
             <p>La Fed alza i tassi al ritmo piu&#x27; rapido in decenni per combattere l&#x27;inflazione: il dollaro fortissimo pesa sull&#x27;oro piu&#x27; di quanto pesi, in senso opposto, la guerra appena scoppiata.</p>
@@ -276,7 +264,7 @@
             <h3 class="trend-titolo">Ripresa e acquisti record delle banche centrali</h3>
             <p class="muted">
               11/2022 &ndash; 01/2024 &middot;
-              da $1,680 a $2,088 &middot;
+              da $1,684 a $2,093 &middot;
               <b style="color:#1a7f37">+24%</b>
             </p>
             <p>La Fed rallenta la stretta monetaria; le banche centrali (Cina in testa) accumulano oro a ritmi record per diversificare le riserve; la crisi delle banche regionali USA (marzo 2023) rilancia la domanda di rifugio.</p>
@@ -289,7 +277,7 @@
             <h3 class="trend-titolo">Raffica di record storici</h3>
             <p class="muted">
               01/2024 &ndash; 12/2024 &middot;
-              da $2,088 a $2,650 &middot;
+              da $2,093 a $2,658 &middot;
               <b style="color:#1a7f37">+27%</b>
             </p>
             <p>Attese di tagli dei tassi, guerre in corso in Medio Oriente ed Est Europa, e continui acquisti dei paesi BRICS spingono l&#x27;oro a superare piu&#x27; volte il proprio massimo storico.</p>
@@ -302,7 +290,7 @@
             <h3 class="trend-titolo">Nuovi massimi oltre i 4000 dollari</h3>
             <p class="muted">
               01/2025 &ndash; 09/2026 &middot;
-              da $2,686 a $4,314 &middot;
+              da $2,694 a $4,326 &middot;
               <b style="color:#1a7f37">+61%</b>
             </p>
             <p>Guerra commerciale e dazi, timori sul debito pubblico USA, ulteriori tagli dei tassi e un contesto geopolitico ancora instabile mantengono l&#x27;oro su livelli record.</p>
@@ -355,31 +343,7 @@
         <i>&quot;missile strike&quot; OR airstrike OR offensive OR bombing</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxORjM0R2hKQ2IxWGRaUkFSZmR1ZkNGM0R0MFhSdktwa1NrQ0xVbnFXd3pCY1huU2tsMzl5OENoQldXZndPRE8xUGpzbHV4SXptVGJNMTV4LTZ1emhhdWN6Mi0tSVRLdDdxOHdVT1NzTVpBY3hIWXJ2d0pMcGdQbFNWSW9PZlgyMmlrUUxlTkN4WE9DMXd4YUU5c0ZjUVdkQjV0MjFDbg?oc=5" target="_blank">Ladkani&#x27;s Offensive Effort Not Enough Against Colorado College - San Jose State Spartans</a>
-            <span class="muted">12/10 00:23</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWVN6QktoZkczOVNWOG1reGRwVG9TckxBZGV0SW5KamJ4TWEwemlxTUxxYXdiazAyM1k1SGFLM0VTSjM3T3prVF9kVlpabk5COWVHaGd6em0yWlhTcC1CNU4zeFJTaE9pVENFQWNoY1FVOUgwWUtYUFI1c3ZMX00wVHlvU0NrRUxaU3dKYWRDNzNwN3MwTG9Md3NhWHltUmhyVDZ3a0ZURWPSAagBQVVfeXFMTVlTekJLaGZHMzlTVjhta3hkcFRvU3JMQWRldEluSmpieE1hMHppcU1McWF3YmswMjNZNUhhSzNFU0ozN096a1RfZFZaWm5OQjllR2hnenptMlpYU3AtQjVOM3hSU2hPaVRDRUFjaGNRVTlIMFlLWFBSNXN2TF9NMFR5b1NDa0VMWlN3SmFkQzczcDdzMExvTHdzYVh5bVJoclQ2d2tGVEVj?oc=5" target="_blank">Riyadh airport hit by projectile a day after deadly missile strike - PBS</a>
-            <span class="muted">11/10 21:49</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQMnRjVkxBaFdUa2RZOXAxMndiQ3NyRGFPdVM1ZmZwNlFNRFRWMU1keV9Mdi1mbUluRmtlV0hYYzc4cDRyWC1VTGNSUWZ4R1REa1NtdF9ZcGdWV09rNTNRc093dm5QZm13Qm1BUEdrQ0pSeTBGY0JUSzJXVzVCVFBlVHloRk1aTmJKdjUxS1p5S1MxVXlGQTU5Si1iVzhidw?oc=5" target="_blank">30th Anniversary Series: Essential Offensive Plays - USF Athletics</a>
-            <span class="muted">11/10 21:21</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMmdZbklNYlRBLVVkYkxrZG5VQ0xfc2MxNEwyNi1IdmlBaGNDZlNpWlVYV285cXBiZmFiWXNyR1RQcExEZzdVZUhva2RaN2xYUnNVTm1QR1dvSnBRSEJYLXJ4N0Ftbl9tN2dKVTN1Sm42aUh0MHdwVjc5UzRvM3RsLWtLLUM3VG1UTFpjMndTeFJ2QXZIS1NmWWVUQnV5cTZvc0RHQy14dVBDUk44a0Z1Z2lDbWdHWC1pN3d5QzVPRDVzVkNYWUxwcG5UQkhCdkRKTy1RbjNtYWhsbHRzWUdLOGRvR2k?oc=5" target="_blank">L&#x27;offensiva degli Houthi contro l&#x27;Arabia Saudita non si ferma, nuovo attacco all&#x27;aeroporto di Riad - blue News</a>
-            <span class="muted">11/10 21:01</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQTUZpNlV6ejNpMDJPQ0k5TGhvbjZoQkJUdUU3TVd4TE9zYjlRdElPZUYzSERSVU5QS190dEh0NVBMY0l3bC1COU9QbFlfUll3aHdoX242eVZpSDJxa1R6YTZqYzZHd3VSM1BBV202RjJnYmNZR080clJlMFZ3VVJONHo5MTJxVHk0NzdpUU5udnpvV2wxbUpXSHpodmRxTjhyS2k4VHFHbzlEQzVI?oc=5" target="_blank">Arabia Saudita, 12 morti per l&#x27;attacco su Riad. Condanne della comunità internazionale - Vatican News</a>
-            <span class="muted">11/10 11:38</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcXhBY3VBcUg5dl9saHdheTZhR2h6bGhCOVpJeWE1aHdKNi1MRGFyVk1ybVJ4bXBSTEhfckV2dU1rNy1WTHJVTW9IVnNWUkVSRWdxNkxnLWdvVTJKZlNYcE5tUVNYVWVUclBZcWFGSnpuZWRUWXVObEZlNXQxZjNPTmx1LTR4YnUwa0lDR2lYVWllS1BZRlJfY0ZJVEE3TF82Nnl4M2hXRUlXblViVWw3NGM3RVNlYmludFlMYk9DNWhTZw?oc=5" target="_blank">Gli Houthi rivendicano attacco missilistico contro l&#x27;aeroporto di Riad, esplosioni in città - Euronews.com</a>
-            <span class="muted">08/10 10:43</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -460,31 +424,7 @@
         <i>&quot;ceasefire&quot; OR truce OR armistice</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxNanVmcWVSbVhFOUlJVWVtbHR4cF8tZzMxT3lSbHhoZGlLbmtzQ1otajZyZVFzd1FvT3pIWkxpVEREMklaSk9jZjhUYnFmRmRkUkM5WXlxWHBKdlN6cEs0WjFGZmdick0wd0lzbGJGYVhkdXJIaGZzUS15blFKQjZBNlJfdEZNSGg0LUZXbm9HVUR5WUkzeEFFamdVYWg0d2wtUE53MzNjV2hpZ1V5NXBWY09BMzBoVmFyb2JmRG5TU2dYZ3Ayb2pjMEN1dE14WmwxQ1Nr?oc=5" target="_blank">Trump annuncia l&#x27;intesa: “Tregua energetica tra Russia e Ucraina, subito in vigore”. Approfondisci qui 👉🏻 https://www.rainews.it/maratona/2026/10/axios-trump-si-e-accordato-con-putin-dopo-che-zelensky-aveva-ignorato-le-sue-richiestetrump-put5in-4217dba - Facebook</a>
-            <span class="muted">11/10 23:52</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNSFhUNWlxY0VWSjhteUoxY1JNYnIxR2RJLXV4NE02eWxKd1lsRU1JNHB2aUVmeDNDZzBWaWVPM0JxUlBIcEZCMkRnQkJ3dlBPYjBxcko3TGlaSEY4ZndpN05FVDk0NFowU1J6bmhxUkpzRGN6STdQbnNyS0Z6X0t6dmhVcVFTQkZWQ2NGY9IBkgFBVV95cUxQYTAxSjdOUGkwUWxZNmwwbUNkckYxTnM5cUFXakhSLVg2LXp5R0lIYVliZnl5SmlvelFnVXdjR3FMRWxscnlBZFdQVXM2blJBV3VLMWFPOXlSeUxubW90RkZKMm5BeWRNc1VSX1N1T1lqczNHZVVxeVAwUnpaNklKVXNCZ1V5alIzX19SVFF2Z3dvdw?oc=5" target="_blank">Trump declares &#x27;energy ceasefire&#x27; between Russia and Ukraine; Zelenskyy is waiting for details - CNBC</a>
-            <span class="muted">11/10 21:32</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNcHdPRWdXX3otN3BOcU5WcGVyNEZKa1g3Y3pLcGJoenpsdEI1bFNOdVFDdmRBdmFnOGN1VjdrZnY4ZUpNNl9ieGU0THVTSThKazRpMXJzRXByNS1scmtJaGpwZ2JOUHFCakxYLWNMaW80UXBhdXZic20zUnJGdy11R1laMFNIalU4WEJjdGVoTm1qSGVhVUEyZlNsWl9nYVVxX01McHZWcGFYM1A4?oc=5" target="_blank">Trump: cessate il fuoco energetico tra Russia e Ucraina. Zelensky: non lo sapevo, quando inizia? - Il Sole 24 ORE</a>
-            <span class="muted">11/10 20:02</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNenNrNjdxdUZuN0RldlJxbHBrYWM0aEdGU25GM21GMTZjZ3I3YXNlcnNWazNNcEdid3FuNUUxblppNDFSUmpBeE4tWjN5U2QzbVZ3U2Q5QlZVblFNaHFFTHZpWVBCbjdCQ1RTWkc2aDdESnNwaEhGX0ltVUpUdUl2YW53RU5BVGx2OF9hR2xxREpWWkM4dF8tMHZmVnFQbGJHZGgybEJNRWNkVUJVR3c?oc=5" target="_blank">Trump claims Russia and Ukraine agree to energy ceasefire, but Zelenskyy says that’s ‘news for me’ - NBC News</a>
-            <span class="muted">11/10 18:34</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNVVF2eXRIalp5NDI3SDlpcW9xVkVfTXlWb1VYN2NveGg2OFFQMTVTb01mVUFGVTl0SHVJbTl0YXFwOXJmNURFQ29TRm12MGFoRmRnSEx3aE84X3VGWjlsMnktMTZOaURXRE9VTXNuUl8zWWRPMW5obVlmSDI2ZUhtZFplQmlaQQ?oc=5" target="_blank">Trump claims Russia and Ukraine agree to energy ceasefire - Axios</a>
-            <span class="muted">11/10 17:19</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi_wFBVV95cUxQU0lRd3BJOEtQbHBLR0QtUWM1Wlh0Ny1OQTRnbzRCWktJdmJmalpSOVN0SmVyZUcyalZGNGM4SnRfR1VVek1NVVVxbEYyWmVMdE9JeVJGQkJEdHVUWmlaSzVNQ0Zvd3BYVjJsR0RCMHdNTVo3c2FpZzNkWU9wRGt6UDlycloxYTBuQ2doSWh6V1Z6S2hkTU9aX1lfSS05S0xrTU5Vb0xUTkRmYTFHVmRDbkhoRkdKUGxEMVhjZEhYQmZMaWpoN0xxeFdKUkR4MTFucGVfUUlFWThYNjl6TElHNFN3dWxQY2lacVdpelRGdG8yUFdONm5WYmJDa2ZsSEU?oc=5" target="_blank">Trump annuncia la tregua energetica tra Russia e Ucraina - Il Fatto Quotidiano</a>
-            <span class="muted">11/10 16:43</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -550,31 +490,7 @@
         <i>&quot;new sanctions&quot; OR embargo OR &quot;export controls&quot;</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWlJWclRPenpaMVpTcFNYMFRZdDJGclBoMHdPQ0xJUnBoeDJ3ZDg4Sm1iTGxRYVJQYldOUEhRZXFueXRYaVRkb210NzRjdDdNTVdlNFdMOExRTE8wZkwxWlJWWUs3YnVhUHVrZUNBM0FtVjVKcERmWnUyNUh5OEEzWmNlLXd6ODJiVkoyaVhzWmhjbWpvOHJXVXJHaERqeUltUkpMZDFMMFBQYnhENzVIckVUT1diaUh2eEExamFVTHQ1QTQyLXdDTC00ZGlrTnExMVNuUU9TWU8yam9lTTNaekFBY1BPeTg?oc=5" target="_blank">Trump misses out on Nobel Prize again and imposes new sanctions on the International Criminal Court. What does it mean? - The Conversation</a>
-            <span class="muted">11/10 07:08</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZHl3cVEwNlpOcFBqT1NDYzZnWi02WTNlTGw1eVZtLTdaSmVnZFJuNmVVVXgxZ01GTFVtdzVpZ2VMV0R0NEplc0FfVW1DRzRNdUdJMjAyZFB6SHZ1MDRkTWVHcEJTelJkdWd4bWphdnZtc2lpOFl2WlVaYUc0WDFMWXBmbXB2c1A5cjdUaWpseWptcWtrNFAwR081anlaRm5FdUhxYzM5bGk5c04tbkFndWx3Z09idFNucTZzN0l2NnBUalnSAcMBQVVfeXFMUGR5d3FRMDZaTnBQak9TQ2M2Z1otNlkzZUxsNXlWbS03WkplZ2RSbjZlVVV4MWdNRkxVbXc1aWdlTFdEdDRKZXNBX1VtQ0c0TXVHSTIwMmRQekh2dTA0ZE1lR3BCU3pSZHVneG1qYXZ2bXNpaThZdlpVWmFHNFgxTFlwZm1wdnNQOXI3VGlqbHlqbXFrazRQMEdPNWp5WkZuRXVIcWMzOWxpOXNOLW5BZ3Vsd2dPYnRTbnE2czdJdjZwVGpZ?oc=5" target="_blank">Ue a Usa: ritirate nuove sanzioni a Cpi pi - RaiNews</a>
-            <span class="muted">10/10 14:30</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNMU1reExQeVBLaXU4dUY0MXlnLTY4c2x2WkcyYVJmYXdaOGVKMTJ2Yjkya2d4dkx1b0JZallRWTd1TjJqb3Roa1lnUEhiUGJzakF6WUZJOTZfX09aVW9fNVdscnl2eU5LbEFMZ2pVQWZqRzlhcmhSRUJRRVhwbVpOc05TVHBMTTQ5ZWthTlZhZzJ3aXZMNGZmMVlYcnNXVnRVSWZ6bUVWU3cxX1BkR1F5MNIBtgFBVV95cUxPYnNDbmRyQ1pVUUFxMTJCMllfNkpiNFF0enVlbWFKYUQ5V3ptekh4MXpuMHVMcmQ1MW9wdXZIUUd6bzROb0JIRzhJb2t3LTdERFNpX2xoR3NWM29FbTI0NXFLVW14Q050anRqVUZPaDh5OW9NX3ZjbjJ4VElqcjNCMmVkcXdfR21SS0dfRU5xMW1UVkt3NFMwTUFiRW9VaEhUUW9EVXRBVW5SRW1Ea3V4cGJ0c3dGdw?oc=5" target="_blank">UN extends Darfur arms embargo, blocks broader Sudan sanctions proposal - Al Jazeera</a>
-            <span class="muted">09/10 02:55</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNdjh1a3g0eHJIOWZGY1YwcDhHYTVxRERoYk0xdkRkbDVXTXVaNUtKMEFmTm0zUTFCRkdYVUFYVXI4NTlHSVJBVUZCRUNsR1FxR1hyUnZNNGlKdXlmSHBCVENnT25qVVY5ZHlZSFBBekpBNHczdjhjRmJuVWp0MFFvaA?oc=5" target="_blank">Cuba si spegne soffocata dall’embargo - L&#x27;intervista a Laura Boldrini - L&#x27;Espresso</a>
-            <span class="muted">08/10 15:34</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNUmt5UGtBbWxkU1Y5YVJpTW5vbktVV0liQ25ndzlzVWhWQXQ5S1AwRGpIcXZGSGJpU0h5TWZzVzRvSW10M2NwelFSa1lPT1RxRG85MTl5WXBTUWlxVTZmNXlCVmIyZ0VKUjY1MzR2Vlc1QURaQWpNWU1EUzlaYkVMTmZ3WlNFU25fekHSAY8BQVVfeXFMUFE0RnVIaS16X3Q4bjF4QmFweWI5QmQ0SjYza1kzOFZVUGVpd002QmJxVnVGT2JlekI0R1EzaW9NLUJZdEEtcEsxeGRXZTl0aTNzdG00cTg3NkFhNjJqWUFqNm9ic0VDNFZldFBISW1jcUczbG5pQWFjZnFzTExXVGltMXBQQ0d3aENBT3Q4MVE?oc=5" target="_blank">US shelves Sudan arms embargo proposal amid UN Security Council divisions - The Hill</a>
-            <span class="muted">07/10 20:07</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ1JtamJBb2FnSGROWjdnMm1hSUlvSXk0b2pyMEpLWl9yTWQyQk9kMkFna2RicGdzN3JEU1FCVTlfemxuWEN5U0pYSVNpWmpwWU5YR18tdVpmOWVDU3VoT3kwT0toeUc5TURqeTgycDV2SDVfT3UzeTVEZk51TWdTdWtfU2R1R2xkc3l1aFB0RXpzd1pyRUNWUVZJNHhnQ283Q3JhYm9mMDdJZw?oc=5" target="_blank">Nuove sanzioni Usa su Cuba. L’isola caraibica sempre più in crisi - Vatican News</a>
-            <span class="muted">30/09 09:00</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -650,31 +566,7 @@
         <i>pipeline OR OPEC OR &quot;strait of hormuz&quot; OR refinery OR oil</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPT0ZSVG5SSkJWekROWFF6Q2NVU1lXWGR4c1hzcUZfOTN6NFIzeENYUlJFX0lJb2xTTk1uVE5ITGhPbUJNUlJ6VkJaTmtaNXVYU05uZE5ydHY4bnlUbG5CWXRSTzBzb2ZjdHVhczhKVmpuNEJnZW0xWVlWSXpsRHdGWmYxVjhMMGZNRzhV?oc=5" target="_blank">House Republican, invoking Reagan, moves to block Trump&#x27;s Russia oil deal - Axios</a>
-            <span class="muted">11/10 22:10</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPQjliTUxQVU5SSFc5MFBRd1hQZnJDTDV6b29xTmhpLVB4UHlEV0tuM1FKOE5HYW5BdmNUYTdGdGpEemxQYmJZcWFGMWp3eXFKOVJ6MnRRZ19DRGc3emloN0RWLWpyaFhnT0ljWDlEU0hTSU5LRUNjV0Y2WFIzWTJRdEpjR0Z4by1QVU56dzVuMVA2MUllTktyYzQ0ZnZqanFBRC0zSHJmc2V4eFZUdkxwRVh2UkxGT2JRcXpHX29UTjdUQTByREE?oc=5" target="_blank">Venezuela Wants to Return to the Days When Its Oil Fields Were Booming—With U.S. Help - WSJ</a>
-            <span class="muted">11/10 19:01</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE43VjFQRFkxRVVwaTRiTHBubTY3M19MS1I2RFZsbWxHakhPUlNfc0Y5WVFvQ2xrY3FaSTAycE1sVmU3QXhnZ1RRTGlndVNPX3MyVVplNXllaFpGN1F6MjMtUnkzRl9JVDNCcWhyaVhOc0otM3lsbXZuWGljYw?oc=5" target="_blank">After oil increasingly left the Gulf, Iran is trying to regain its stranglehold on shipping - CNN</a>
-            <span class="muted">11/10 18:28</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOa2NEQWhRTlUyNWtGTUd5N2tTR0pISlpORTE2WFNLdGhNaERCbjVJYVR6ekRnQ3hkWnVtaGhPOWN5N1J5XzE4RHRPS0dVQUZILWRzNVJZZS1QbzBNV19FY1dXVkREcXpjVDdDcFJRYlgtVEpycURYb3FPQUhQdWxIT2VhWTY1RG1WRVhybm4wVGtBYXc4QzVCRkZidFhtcVZ2UnFCTTNhZ2txNDRva0s2TXJnSUk2Ykd1?oc=5" target="_blank">Ogni 72 ore una raffineria russa finisce sotto attacco - Tgcom24</a>
-            <span class="muted">11/10 13:28</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOUC1VbHBHMFBPVUVULVpfTU1wRHJxN2xzTGdLMFk1c1Z5R3NNMTJoQTA2Z3M1LXZRS29UQUwwcTBmVjVvSTNZQ0NyMzlpbFRaYjJzeGYtOW9wSHFMZkd1d0Zpb2xjTS1tbE1VcFNTbTNJYU5JSVhEc2tWcEZ4Y3hqN01xaC1SVFpsRzlmNjl1WVhjdnhNNmp3WHk1RUpveVBZenlQWnVqRUlhQXYxa25SdnZiZ3huZ9IBuwFBVV95cUxNcTZTSWdlNlpqeFNRNFFQMFVPRzNFLUVuRUd0d2VNc0dqZUROTFpWXzFmQTZDY05EMm1QU2lQdERvOHlCLVU0V2JvRTZaWmVQNWJiSjJ6QXYzZ1duQ1NVVXV6ZXN1TVlCVFl4Zk9pTUF2Q0trNUQ1ZmRlN3hmczlqSkR4TnF6MWtxYUVmWEtBWlhFQm9XcG5EcWJEV0M1NjdfX2tsQ2FrWGYyMXVHLTMwTkpvSjhXUnliLUZj?oc=5" target="_blank">Il bluff di Putin sul diesel: le raffinerie della Russia in ginocchio dopo gli attacchi - La Stampa</a>
-            <span class="muted">11/10 01:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxQY0t2NFNEWWQ2X3lqM05lMm5WajE4VlFYdl9oZjVBbGdkaTVheDczRjZRTGQ5TjFXVUxyR1FIbXFkRTdQMmE0QnA4Ul94eFBIeWwwZ1Q0aGdfV0JQX3UxVHNaSkVYR3B4UEdJRE5xRDhSLWZDLXMxOEhuX3RNdVVOS0JtTXdvaGZ6T19hMnVFWng3a1NMekprQ0pWdXJ1Nm5rSHFxNklXazdmYnZOdUI4RlBaOEU1VjN1WDFOeFRrclhyNlZsZVZqRklPNzdyVFFwWXFSNUdfcw?oc=5" target="_blank">Zelensky: «Bombe su Zaporizhzhia sono il grazie di Putin per revoca sanzioni diesel» - Il Sole 24 ORE</a>
-            <span class="muted">10/10 08:39</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -745,31 +637,7 @@
         <i>&quot;coup d&#x27;etat&quot; OR &quot;snap election&quot; OR resignation</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPOERUR0w1VDlPLWxwQlZCdklaWS1wYlNGc0hNb3ZyZjZ6ZmJ4NTU4aWhta3loYXZ4TGpyNmZuRkZzTWppYWJneUR6WllYTEtGQ2FuUVljNHJTYV9tS0VZZG4zYUloTWZzTk1ZVk5zc3VCWTBCYVl3bXpoX1pSa2R1MnloWW5EM3RsT0xoRTJ5OGxpOVlGdzhXa3Mwal81b1RzZGF2UWFPdHdlcktmaFlyaS05X3RCLWpCd2hCVXROaEpyNUpvMUlOZ0kyNTlDVUhIdkljMDJn?oc=5" target="_blank">Exasperation and resignation in Greece over allegations against Kimberly Guilfoyle - Inquirer.com</a>
-            <span class="muted">11/10 22:26</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQSnlqemNocXU4WHRjZ00zeEpiYW5xT1Nxb2Q5Y1ZVNnZuclFiYjZ0YmxPend4NzVTQ3g5US05a3JwY1VlWFBnODdIeUdRVWc1ZE8wMlpiR2x4Y1JZaEQxaE9Sb19qUTl1MnBsZkVvaHBKQ3YxVmxyRThmTmpVcWtmRVowdVlDTkVCSGo5UmtHeTdoc2laaVRMaDJ6ZDFETWxsZnE5OUc0Y1FwVjVzMlZHMFZ2ckpieDdUSFptRzhiXzQ1UUwt?oc=5" target="_blank">Leaders from India&#x27;s &#x27;Cockroach&#x27; movement released from detention, pledge to hold more protests - PBS</a>
-            <span class="muted">11/10 21:08</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiiAJBVV95cUxNY0NfY1pfRWF0anpPaURRT25GXy1MSXRjTElGR3F3ZGJPdVNNOWVOYy1oMkEydjg4aG9TeGoteXd3N2k5YVhhX0pVTUJvenNoemZQb0dFbnp5by02U1NlczBWOTFpV2xlWEkyNi1LU21KQ01jUEdLeExxR0Q0RVJWRlprMHJuNGJTcXZRbldub3BIWktCanZJTXRMeW1YTFk2aW1VQVd1ZC1DYWpZWlBJOTAxZVFUMHdxM2ZnWm96aktIOHhsdERQU2Zhb19oeUlIUFNEalpjVlpJNjRVXzFneF9MT2Zsb2psUzN4WjNFc2c3WUdUMnF3dHF5Y3d4TTJtS2lNM0xoZ1TSAY4CQVVfeXFMT1VobWxZS21pbVZZTXZnQm1yalowUEVSaWNxYWRjTEpCMFMycnBEY2w0RTJtRHlFaWVwd0RKc3dqV3J3VFo2MTZ4ejlIWS0xSG9kZGVROU5iQldCVXd5SE1YeWJOR0xuVHJkU2trR3p3X09RRkhDaExSODBuODdEWnBIWUN5aVhObWk1R0J1X21jLVJXNnYzNGx3OXA1NXpWZE9JR3IzTnlNV0VENUJfWVVSNDkxQmZWWDA4UXpxWVR2LTBZbGxkMFdpLVNGM1VBMzNtaGZWeEF2TDlYdVZUeTBFei00QkFnbk42dWtQdmRvekVJcHRGbU9yRkJhNGtnUnZrR2tvaUpDMGF2UkVR?oc=5" target="_blank">Incinta al settimo mese, muore con la bambina dopo le dimissioni dall’ospedale: aperta un’inchiesta - RaiNews</a>
-            <span class="muted">11/10 14:22</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMigAJBVV95cUxQSEZmbWc0RTJydUZKMWJUemZZelJKSWViU0dCaktBSElYeERDVHdPWU1Wbmt2eFZ5RlJ3MHZfMzNkSl9lb2Z5akFPUng0OVVhQkN6SzEzbFR6RUkzU1c2bGFGZFVXb01zN3RaTWhsYS1ieEFrUVUxcmxxZkF1aDU0d3AxRHJvNEtBQlhPd3piMURVUWMzcXBhNFdQSGFYOUZSNWJYSEhYdVI0a0R5cE1zSXZ0MEhLTjNZd2k1QllRQlFvMVhqVnR6TnlSb1ctcUdaTHlaSWx4V1A5NjV6ZjlRU2tUZGVWQnAzM0Q5aFhZMG80UGpXVFN3RVhoWXZIUVVZ?oc=5" target="_blank">FISI, ora cosa succede? Roda verso le dimissioni, in quel caso commissariamento ma c&#x27;è l&#x27;ipotesi di elezioni solo a fine stagione. Le parole di Noris - neveitalia.it</a>
-            <span class="muted">11/10 09:50</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNM0c3VUR5ZUVPakJLZHV1aVNIeVJPQjdOcW5kRnBlWEQwV09mYXpRd0YyZF9VUFJHeXFpcExJNWNOQ0hRLU9wZEdMVjJqd0dIcDBJdEVpOURXWG1IejhlMTRHWW1zMkhFdjJhbzR3bFJ2eHBjLWJpUTFITUc2bnBHNk9GNEk1ajRNckFQLQ?oc=5" target="_blank">Opinion | Spain’s Snap Election Is a Chance to Reject Pedro Sánchez - WSJ</a>
-            <span class="muted">08/10 23:20</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNVTFYNmNUUmZONUhLTGRQSW5mUE4xN1B4bUdEeEJUbmM4bDVNOVA4cE4xT201M3RqV25yWlU3NnJhUTFDdG8yRmJxWURmMlVIeHNxMjJoVWQ5UmdRZVRpb1lqdEZqd0daeDFHODloU3IxaWI1N0NWTjNqbU5FSWktZFdtSDBCVURROFBoOXNYU0Y?oc=5" target="_blank">Sicilia, conclusa la Giunta regionale: Schifani non si è dimesso - Sky TG24</a>
-            <span class="muted">08/10 11:23</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -840,31 +708,7 @@
         <i>&quot;interest rate&quot; OR &quot;Federal Reserve&quot; OR &quot;rate cut&quot; OR &quot;rate hike&quot;</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNbjNTeE9pcnEzX2I3VVY5WGw3a3kwMS1UeWhMY05hWGs0Z3N4a0tqM0hYcllJVTc4MkNOMlZYUWJJeFcwSkhIX3pwaXhYTW5SSmNMWmtKVk4zQVJuOUcwZ3pQcmt4Z2swbWF5dTFVVlgtUE5WdnpOQ1NhLUpteENKeTdHN0pvSHpiSnlwSWk2WjV2clJGMGtNd3RrbnlIT2U3bExIMl9PMjdsMW84NjBlbjAzSWJIZw?oc=5" target="_blank">Bond Selloff May Mean Fewer Rate Hikes From Global Central Banks - Bloomberg.com</a>
-            <span class="muted">11/10 21:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQcThHd1dzclhvaThVNFNNVzFfbFZXWHpmSHRWTnBqYkFPczNXNzJrN2NrU0d4OUNBLTQ3SHRNR0VpSmdiNXJfVENuWWJtQldKY2t5UWItaXVhWnZtd05rbUN4Y29EVWpEUDhlSmpIdy1DUGtsSWxkcDBVU1ZBb3ZKUmd2V0FKejhMOUJkOGFYazRBSjZWTmRRLTNQRWM?oc=5" target="_blank">Fed’s Waller pivots on interest-rate bet as worried consumers sound inflation alarms - Yahoo Finance</a>
-            <span class="muted">11/10 19:17</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVGl4ZFlZcFZXcGtrMTFJcnh3VUVZQjBJV0NDNEo3Z1ViTTFFMTJCeHJ5SG5ibk53dGhXc1MtV3EzTVVrV3ZobjlSb0NaTXVrZFN0WmVvQ3AySXpneHlRUFVJMGhQM0YtcHpUZTU4eko5bnJDaGEtZjlvUFZ0dXFlZ2RJNXQ2UW13bGZwS1JMemZCZmhOeVVqRVhyT0pJUGNnQkl1V1poLV83LXNIam1Ub0dVNjV5RGhsZDVJNFpGUm1OaTV0WXRiYWxZck1lQ0hBTWdyRnUxOGRlOHIzWjNr?oc=5" target="_blank">Previsioni Prezzo Argento: Il Rimbalzo Sotto la Minaccia dei Rialzi della Fed Prima del CPI - FXEmpire</a>
-            <span class="muted">11/10 16:40</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPdVpFbWJydEFBMkkyYXU1NFhqVUd0WFppVklNYldyQzR5M2wwZ3hyT2oxSXZ5dkN2VklKd0lVZUhjRFNxS0RQSWtBMW1kX3ZfR09oZ0RIUV8xR2g3T0VPYmNDMzZYU016QnBKUHREUHZWRmJCeEcwYnVYLTlxb1ZDUXhSQ0I?oc=5" target="_blank">Will September inflation cement US interest rate policy for the rest of the year? - Financial Times</a>
-            <span class="muted">11/10 13:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQTEVTanRDUmNzVnd1VUpCd2QyOUI1R3pVYk9MQzlLM3RScVhyd1JXLXZ0ZnJDdFBYR1VLOWgxcW5ROGp3anRDZXR1elhKSW9RdHNvbTBWcWpXclNqT2dUdXJOSjVmbENQUHZiZzE5a2tvQm11MnNfX2pPZ3UtNzhvSGNISWJYNkswUEE?oc=5" target="_blank">I verbali della Fed suggeriscono un altro aumento dei tassi quest&#x27;anno, perché ha reagito solo Bitcoin? - Yahoo Finanza</a>
-            <span class="muted">07/10 20:05</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxOSlJ6TTZaMjlqWm5lSks2TDM0RERjTXVKbXRIY2RDY0Yxc0VqbW9CYWsyb1lvUXpiVU5RMHN3MS1PejdaVzBZSUZNX2dGREF2OWVOcGg1elVBWlhoZXF1R0ZwMlZBVjE1SDJfSW4ydkltYUNHYkFVZklGU2ZtdHNGczJIV292cVdtUWplSm1TajlaOEpwRnN6ZzUwdTBFOVlXWGhUZ3NTSzdyY2pMWFZuMFJqb2p2cGQySXFQNTlmZGNHT2hnY1paZTEzS3BuUE1tZnBPdlg5bExOekRFZVkyYjB0X2JiaFE?oc=5" target="_blank">Giornata di vendite per l&#x27;Europa, attesa per i verbali Fed - Borsa Italiana</a>
-            <span class="muted">07/10 13:00</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
@@ -930,31 +774,7 @@
         <i>&quot;bank failure&quot; OR &quot;banking crisis&quot; OR &quot;market crash&quot; OR &quot;market selloff&quot;</i> (inglese).
         Ricerca volutamente ristretta: in giorni tranquilli e' normale vedere poche o nessuna notizia.
       </p>
-      <ul class='notizie'>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV2R4TXVOR0VQX1ltSGVJMFlDNTRLRXE5RjJRVERJazdpbGhsRWVDU2dlVV9wM2R0R1pFdGJpUEZrSEhpNFZlcTJ3OHlsN3BST2Y5c0JFcnQxUDdUZVdLQm1KM1lMZl9lRXI5d3lCN1BMbWJRNlhTTDBEZzJOUXlocXRrX3lfdjZVcm91Y0Q3eW1scU80Z245TWJPUTNhQVNCd29seHpDSmo?oc=5" target="_blank">Stock Market Crash Hits 54% Of Stocks—Is The S&amp;P 500 Next? - Forbes</a>
-            <span class="muted">11/10 13:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNUVNHcDdoT0VORFhXdEJyZzNpekIzeFI4X3VBWjV1YmwxenJITl9ncklveWxEVHZ3V1QyaHJJRXJrdHNZbVcwR2ZpbDlfcUVSdjdvUkQyakY2NzQteE5GdnBSRmw4cVNWdzZzb1VEeWkxWUhuSm9JTmVTbnVybm14dms3VUI4cEMtajNkSVg0MlRES1E3YnI0OGZldVZXUTF1NkpGeQ?oc=5" target="_blank">If a Stock Market Crash Is Coming, Billionaire Investor Bill Ackman Says You Should Do This 1 Thing Right Now - Yahoo Finance</a>
-            <span class="muted">09/10 23:05</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOcmFVb2RXM3B0YmZ5aHlCSm9oMHZ6N3ZzU1pyTHNXNGkzamRGV1VMNVhzMFpwLUZiWHpvYllENWpmdnZTa19KLTQ2QXVRaG9keUhUWFdlRUhpUFBxczlYNlM0SDRrZUtCSlIzcWtENGgwVnRPdHhMajJGQ1RsbHIyUGRIWFYzN21GVk5FWGphTENMSmhSSlJBLQ?oc=5" target="_blank">Warren Buffett&#x27;s Top Strategy for Navigating a Market Crash - The Motley Fool</a>
-            <span class="muted">08/10 16:45</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPQ3hRbVptWnpTUmhEeHhndV96djBsZ19zRHVMWDZHNUI1LXRpMWFCQXdrT2hUNnZDZ09pV19tSzFtYUJ3TnVQVXFNc1RiWENqOW10bVh2b0VGQ3NJRk5SRnBLR2dNd0ZBMi10TjBvTmZFN3RDNHFibS1NenZGWDhlZHhCbVhKOWI1VnBjTVdTZ2cxWHVHdHNhQk9kRUxiUQ?oc=5" target="_blank">Trimestrali deludenti. Crollo dei mercati, STMicroeletronics perde il 12% - La Cronaca di Verona</a>
-            <span class="muted">23/07 09:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNVTBweWNjS0dtT2YwN09OdU0wNS14cDAtdXdVeXl0LVJRUVJ6MWhrdkV3SXJzUGZ2MGVyMWhpM3MtLUktZ2k0bkpFU2lvWHhMT21SWnlRZjY4TmladnFBUlhUVTc0c1FXek5WeDdrUndCTEZJWHlkZnZ0VmJYZ1VWM0t2YjhLRUhEcWh3RVlLb2VFQkcyejJnUTN6SEljUzR1N2dLX1V3TGJFbnN4Q3A3bFBLcmtOcG16RVJzR05R?oc=5" target="_blank">Crollo dei mercati azionari: perché gli investitori sono preoccupati - Investing.com - Quotazioni, Borsa, Economia e Finanza</a>
-            <span class="muted">23/06 09:00</span>
-          </li>
-          <li>
-            <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5wR2dEQ0s5dGtRcVlBekxjcWVjazZfc0ZvWTlKR0V6ZVVjS0h5VDFQT1JMZDc0WlMwQnNlN2k5SVFkbWVYRUhZZ1ZxRkloSEF5MDdTbzZnN3o1dUs1ZV96RFRHUy1oTi04TlNxVTZQOHBheTlrVUtaZUFR?oc=5" target="_blank">Cathie Wood scarica durante il crollo dei mercati: super vendite dalla regina di Wall Street - Criptovaluta.it</a>
-            <span class="muted">11/06 09:00</span>
-          </li></ul>
+      <p class="muted">Nessuna notizia recente trovata per questa categoria.</p>
 
       <h3>Casi simili nel passato (dati reali)</h3>
       
