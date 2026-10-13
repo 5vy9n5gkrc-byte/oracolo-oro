@@ -729,36 +729,6 @@
     }
   },
   {
-    "data": "2026-10-12",
-    "previsioni": {
-      "geopolitica": {
-        "1 giorno": {
-          "p_su": 0.5818181818181818
-        },
-        "1 settimana": {
-          "p_su": 0.6727272727272727
-        }
-      },
-      "oscillazioni": {
-        "1 giorno": {
-          "p_su": 0.5412514946193703
-        },
-        "1 settimana": {
-          "p_su": 0.564870259481038
-        }
-      },
-      "combinato": {
-        "1 giorno": {
-          "p_su": 0.5731253202755793
-        },
-        "1 settimana": {
-          "p_su": 0.6496150556030795
-        }
-      }
-    },
-    "esito": {}
-  },
-  {
     "data": "2026-10-09",
     "previsioni": {
       "geopolitica": {
@@ -780,6 +750,41 @@
       "combinato": {
         "1 giorno": {
           "p_su": 0.5730861244019139
+        },
+        "1 settimana": {
+          "p_su": 0.6496150556030795
+        }
+      }
+    },
+    "esito": {
+      "1 giorno": {
+        "salita": false,
+        "variazione": -0.6318562485374324
+      }
+    }
+  },
+  {
+    "data": "2026-10-12",
+    "previsioni": {
+      "geopolitica": {
+        "1 giorno": {
+          "p_su": 0.5818181818181818
+        },
+        "1 settimana": {
+          "p_su": 0.6727272727272727
+        }
+      },
+      "oscillazioni": {
+        "1 giorno": {
+          "p_su": 0.5412514946193703
+        },
+        "1 settimana": {
+          "p_su": 0.564870259481038
+        }
+      },
+      "combinato": {
+        "1 giorno": {
+          "p_su": 0.5731253202755793
         },
         "1 settimana": {
           "p_su": 0.6496150556030795
